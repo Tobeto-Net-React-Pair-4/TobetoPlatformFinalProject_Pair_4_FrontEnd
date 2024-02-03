@@ -1,0 +1,77 @@
+.nav-link {
+    display: block;
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 1em 4em 1em 1.5em !important;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.nav-link-color{
+  color: white !important;
+}
+.navbi-custom {
+  padding-left: 0 !important;
+}
+
+.custom-dropdown .dropdown-menu {
+    background-color: #9933ff; /
+  }
+  
+  .custom-dropdown .dropdown-item {
+    color: white; 
+  }
+  
+  .custom-dropdown .dropdown-item:hover,
+  .custom-dropdown .dropdown-item:focus {
+    background-color: #3e0272; 
+  }
+  
+.nav-custom .nav-link {
+    color: white;
+    transition: color 0.15s ease-in-out; 
+  }
+  
+  .nav-custom .nav-link:hover, 
+  .nav-custom .nav-link:focus {
+    color: #9923ff !important;
+    background-color: transparent; 
+  }
+  
+  .navb-btn {
+    border-radius: 25px !important;
+    position: absolute;
+    right: 180px;
+    margin-top: -1em;
+  }
+  
+  .navb2-btn {
+    border-radius: 25px !important;
+    position: absolute; 
+    right: 20px; 
+    margin-top: -1em;
+  }
+  .btn {
+    --bs-btn-color: white !important;
+  }
+  .navb-btn, .navb2-btn {
+    border-radius: 25px;
+    margin-top: -1em; 
+  }
+  
+  @media (max-width: 576px) {
+    .navb-btn, .navb2-btn {
+      position: static;
+      margin-top: 0;
+      width: 100%; 
+      margin-bottom: 10px;
+    }
+  
+    .d-flex.justify-content-end {
+      justify-content: center;
+      flex-wrap: wrap; 
+    }
+  }
+  
+  

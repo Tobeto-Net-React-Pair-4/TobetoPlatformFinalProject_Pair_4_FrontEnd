@@ -1,0 +1,25 @@
+.footer {
+  background-color: #9933ff;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.footer button {
+  border-radius: 14px;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: pink;
+}

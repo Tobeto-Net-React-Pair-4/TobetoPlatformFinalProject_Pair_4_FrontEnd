@@ -1,0 +1,93 @@
+.navbar-brand {
+  margin: 0;
+  position: fixed;
+  left: 0;
+}
+.profile {
+  margin: 0;
+  position: fixed;
+  right: 0;
+  padding-right: 35px;
+}
+
+.nav-link:hover {
+  color: #9933ff !important;
+}
+.navbar {
+  --bs-navbar-nav-link-padding-x: none;
+}
+.nav-link-custom {
+  display: block;
+  font-size: 16px !important;
+  font-weight: bold;
+  margin: 1em 0em 1em 2.5em !important;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+/* Avatar Dropdown Container */
+.btn-group.header-avatar {
+  position: relative;
+}
+
+/* Avatar Button */
+.btn-group.header-avatar .btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Avatar Image */
+.btn-group.header-avatar .cv-pp-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Avatar Name */
+.btn-group.header-avatar .name {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  color: black;
+}
+
+/* Dropdown Menu */
+.btn-group.header-avatar .profile {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 150px;
+  background-color: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  box-shadow: var(--bs-box-shadow);
+  z-index: 1000;
+}
+
+/* Dropdown Items */
+.btn-group.header-avatar .profil-dropdown {
+  padding: 10px 20px;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  display: block;
+}
+
+/* Divider Lines */
+.btn-group.header-avatar .dropdown-divider {
+  margin: 5px 0;
+  border: 1px solid var(--bs-border-color);
+  opacity: 0.5;
+}
+
+/* Hover Effect */
+.btn-group.header-avatar .dropdown-item:hover {
+  background-color: var(--bs-light);
+}

@@ -1,0 +1,85 @@
+.list-inline,
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.lf-footer {
+  background-color: #181717;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 5.5rem;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.list-unstyled a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-unstyled a:hover {
+  color: inherit;
+}
+
+.list-unstyled li {
+  padding-top: 10px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.padding-tb-40 {
+  padding: 40px 0 40px 0;
+}
+
+.padding-footer-column {
+  padding: 15px 15px;
+}
+
+.margin-row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@media (max-width: 767px) {
+  .text-left-row2,
+  .text-right-row2 {
+    text-align: center !important;
+  }
+}
+
+.text-left-row2 {
+  text-align: left;
+}
+
+.text-right-row2 {
+  text-align: right;
+}
+
+.border-top {
+  border-top: 1px solid gray !important;
+}
+
+h5 {
+  padding-bottom: 10px;
+  font-weight: 700 !important;
+}
+
+.lf-icon {
+  color: #9933ff !important;
+  font-size: 1.3em;
+}

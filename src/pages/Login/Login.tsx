@@ -4,6 +4,8 @@ import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import axios from 'axios';
 import React, { useState } from 'react';
+import  {Link}  from "react-router-dom";
+
 
 
 const Login = () => {
@@ -81,13 +83,14 @@ const Login = () => {
             </p>
           </small>
         </label>
-        <Col className="col-12 mt-6">
-          <Button
+        <Col className="col-12 mt-6 p-2">
+          {/* <Button
             className="text-decoration-none text-muted fw-bold"
             variant="link"
           >
-            Henüz üye değil misin? Kayıt Ol
-          </Button>
+          </Button> */}
+          <Link to="/Register"  className="text-decoration-none text-muted ">  Henüz üye değil misin? <b>Kayıt Ol</b></Link>
+
         </Col>
       </Col>
 

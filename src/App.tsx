@@ -10,6 +10,7 @@ import LoginFooter from "./components/LoginFooter/LoginFooter";
 import Platform from "./pages/Platform/Platform";
 import Navi from "./components/Navi/Navi";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 const App: React.FC = () => {
   return (
@@ -45,7 +46,7 @@ const App: React.FC = () => {
               <>
                 <Banner />
                 <CustomNavbar />
-                <Login />
+                <Register />
                 <LoginFooter />
               </>
             }

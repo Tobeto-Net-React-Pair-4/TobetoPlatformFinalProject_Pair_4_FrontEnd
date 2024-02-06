@@ -11,6 +11,7 @@ import Platform from "./pages/Platform/Platform";
 import Navi from "./components/Navi/Navi";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import PasswordReset from "./pages/PasswordReset/PassworReset";
 
 const App: React.FC = () => {
   return (
@@ -58,6 +59,16 @@ const App: React.FC = () => {
               <>
                 <Navi />
                 <Platform />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/passwordreset"
+            element={
+              <>
+                <Navi />
+                <PasswordReset />
                 <Footer />
               </>
             }

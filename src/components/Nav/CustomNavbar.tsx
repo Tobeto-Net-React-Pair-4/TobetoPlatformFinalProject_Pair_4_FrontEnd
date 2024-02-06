@@ -74,12 +74,12 @@ const CustomNavbar = () => {
               </NavDropdown>
             </Nav>
             <Nav className="d-flex justify-content-end">
-              <Nav.Link href="/home" className="me-2">
+              <Nav.Link href="/login" className="me-2">
                 <Button className="navb-btn" variant="text-light border-light">
                   Giriş Yap
                 </Button>
               </Nav.Link>
-              <Nav.Link href="#">
+              <Nav.Link href="register">
                 <Button className="navb2-btn mx-1 btn-rainbow">
                   Ücretsiz Üye Ol
                 </Button>

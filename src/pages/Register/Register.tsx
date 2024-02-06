@@ -2,6 +2,7 @@ import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import "./Register.css";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
+import  {Link}  from "react-router-dom";
 
 const Register = () => {
   return (
@@ -66,19 +67,18 @@ const Register = () => {
             <small>
               <p
                 style={{ cursor: "pointer" }}
-                className="text-decoration-none text-muted mt-5 d-block"
+                className="text-decoration-none text-muted mt-4 d-block"
               >
                 Şifremi Unuttum
               </p>
             </small>
           </label>
-          <Col className="col-12 mt-6">
-            <Button
+          <Col className="col-12 mt-6 p-2">
+            {/* <Button
               className="text-decoration-none text-muted "
-              variant="link"
-            >
-              Zaten bir hesabın var mı? <b>Giriş Yap</b> 
-            </Button>
+              variant="link">
+            </Button> */}
+            <Link to="/Login"  className="text-decoration-none text-muted "> Zaten bir hesabın var mı? <b>Giriş Yap</b></Link>
           </Col>
         </Col>
 

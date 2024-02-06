@@ -68,9 +68,7 @@ const Login = () => {
               />
             </Form.Group>
             {error && <p className="text-danger mt-2"><strong>{error}</strong></p>}
-            <Button className="btn btn-primary w-100 mt-6" onClick={handleLogin}>
-              Giriş Yap
-            </Button>
+            <Button className="btn btn-primary w-100 mt-6" onClick={handleLogin}> <b>Giriş Yap</b></Button>
           </Form>
         </Col>
         <label>
@@ -89,8 +87,9 @@ const Login = () => {
             variant="link"
           >
           </Button> */}
-          <Link to="/Register"  className="text-decoration-none text-muted ">  Henüz üye değil misin? <b>Kayıt Ol</b></Link>
-
+          <label>Henüz üye değil misin?
+          <Link to="/Register"  className="text-decoration-none text-muted "> <b>Kayıt Ol</b></Link>
+          </label> 
         </Col>
       </Col>
 

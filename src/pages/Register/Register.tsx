@@ -21,6 +21,7 @@ const Register = () => {
                 className="mb-4"
                 style={{ maxWidth: "200px", height: "auto" }}
               />
+               <h3 className="mt-6">Hemen Kayıt Ol</h3>
             </Col>
           </Col>
           <Col>
@@ -63,22 +64,15 @@ const Register = () => {
               <Button className="btn btn-primary w-100 mt-6"><b>Kayıt Ol</b></Button>
             </Form>
           </Col>
-          <label>
-            <small>
-              <p
-                style={{ cursor: "pointer" }}
-                className="text-decoration-none text-muted mt-4 d-block"
-              >
-                Şifremi Unuttum
-              </p>
-            </small>
-          </label>
-          <Col className="col-12 mt-6 p-2">
+          <Col className="col-12 mt-6 p-4">
             {/* <Button
               className="text-decoration-none text-muted "
               variant="link">
             </Button> */}
-            <Link to="/Login"  className="text-decoration-none text-muted "> Zaten bir hesabın var mı? <b>Giriş Yap</b></Link>
+            <label>
+            Zaten bir hesabın var mı?
+            <Link to="/Login"  className="text-decoration-none text-muted ">  <b>Giriş Yap</b></Link>
+            </label>
           </Col>
         </Col>
 

@@ -35,7 +35,7 @@ const App: React.FC = () => {
               <>
                 <Banner />
                 <CustomNavbar />
-                <Login/>
+                <Login />
                 <LoginFooter />
               </>
             }

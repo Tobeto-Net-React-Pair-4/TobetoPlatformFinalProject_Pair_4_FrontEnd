@@ -73,12 +73,13 @@ const Login = () => {
         </Col>
         <label>
           <small>
-            <p
+            <a
+              href="/passwordreset"
               style={{ cursor: "pointer" }}
               className="text-decoration-none text-muted mt-5 d-block"
             >
               Şifremi Unuttum
-            </p>
+            </a>
           </small>
         </label>
         <Col className="col-12 mt-6 p-2">

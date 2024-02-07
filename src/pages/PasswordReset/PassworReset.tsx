@@ -1,6 +1,7 @@
-import React, { useState } from 'react'; import axios from 'axios';
-import { Button, Form } from 'react-bootstrap';
-import styles from './PasswordReset.css';
+import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
+import React, { useState } from 'react';
+import axios from 'axios';
+import './PasswordReset.css';
 
 
 interface State {
@@ -32,29 +33,37 @@ const PasswordReset = () => {
     };
 
     return (
-        <div className={"form-container"}>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="email">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control
-                        type="email"
-                        name="email"
-                        value={state.email}
-                        onChange={handleChange}
-                        placeholder="Enter email"
-                    />
-                </Form.Group>
+        <div >
+            <Container>
+                <Row className="justify-content-center mt-5 ">
+                    
+                    <Col md="auto">
+                        <Form onSubmit={handleSubmit} >
+                        
+                            <h1 >Reset Your Password</h1>
+                            <Form.Group controlId="email">
+                                <Form.Control
+                                    type="email"
+                                    name="email"
+                                    value={state.email}
+                                    onChange={handleChange}
+                                    placeholder="Enter email"
+                                />
+                            </Form.Group>
 
-                {state.error && (
-                    <div className="alert alert-danger" role="alert">
-                        {state.error}
-                    </div>
-                )}
+                            {state.error && (
+                                <div className="alert alert-danger" role="alert">
+                                    {state.error}
+                                </div>
+                            )}
 
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
+                            <Button className="button " variant="primary" type="submit" >
+                                Submit
+                            </Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

@@ -1,3 +1,4 @@
+
 import {
   Navbar,
   Nav,
@@ -9,13 +10,13 @@ import {
 } from "react-bootstrap";
 import "./CustomNavbar.css";
 import TbtLogo from "../Image/Tebeto-logo-yatay-beyaz.png";
-import "./CustomNavbar.css";
 
 const CustomNavbar = () => {
   return (
     <Row>
       <Col lg={12} md={12} sm={12}>
         <Navbar
+          collapseOnSelect
           expand="lg"
           variant="dark"
           bg="black"
@@ -26,10 +27,10 @@ const CustomNavbar = () => {
             className="me-4 mx-5"
             style={{ width: "165px", height: "35px" }}
           />
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
-              className="nav-custom mr-auto justify-content-center "
+              className="nav-custom  mr-auto justify-content-center "
               style={{ flex: 1 }}
             >
               <Nav.Link className="nav-link-color" href="#biz-kimiz">

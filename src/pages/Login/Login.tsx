@@ -7,10 +7,9 @@ import "./Login.css";
 import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
-import  {Link}  from "react-router-dom";
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from "react";
 import { LoginCredentials } from "../../models/requests/login/loginCredentials";
+import { ToastContainer, toast } from "react-toastify";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
@@ -29,16 +28,16 @@ const Login: React.FC = () => {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			navigate("/platform");
 			console.log("toastre başarılı giriş");
-			toastr.success("Giriş başarılı.");
+			toast.success("Giriş başarılı.");
 		} else {
 			console.log("hatalııııı nerde toastr");
-			toastr.error("Hatalı giriş");
-			toastr.warning("aloooo");
+			toast.error("aboooovvv");
 		}
 	};
-	
+
 	return (
 		<div className="row equal-col">
+			<ToastContainer />
 			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12">
 				<div className="py-4 px-sm-0 px-md-12 text-center">
 					<div className="d-flex flex-column align-items-center">
@@ -50,59 +49,59 @@ const Login: React.FC = () => {
 						/>
 					</div>
 					<Formik
-							className="form-animated-border"
-							initialValues={{ email: "", password: "" }}
-							onSubmit={(values: LoginCredentials) => {
-								OnSubmit(values);
-							}}
-							validationSchema={validationSchema}
-						>
-							<Form data-hs-cf-bound="true">
-								<Field
-									name="email"
-									className="form-control mt-6"
-									placeholder="E-Posta"
-								/>
-								<ErrorMessage
-									name="email"
-									render={(error) => (
-										<label style={{ color: "red" }}>{error}</label>
-									)}
-								/>
-								<Field
-									name="password"
-									className="form-control mt-6"
-									type="password"
-									placeholder="Şifre"
-								/>
-								<ErrorMessage
-									name="password"
-									render={(error) => (
-										<label style={{ color: "red" }}>{error}</label>
-									)}
-								/>
-								<Button type="submit" className="btn btn-primary w-100 mt-6">
-									<b>Giriş Yap</b>
-								</Button>
-														<label>
-							<small>
-								<p
-									className="text-decoration-none text-muted mt-5 d-block"
-									style={{ cursor: "pointer" }}
-								>
-									Şifremi Unuttum
-								</p>
-							</small>
-						</label>
-							</Form>
-						</Formik>
+						className="form-animated-border"
+						initialValues={{ email: "", password: "" }}
+						onSubmit={(values: LoginCredentials) => {
+							OnSubmit(values);
+						}}
+						validationSchema={validationSchema}
+					>
+						<Form data-hs-cf-bound="true">
+							<Field
+								name="email"
+								className="form-control mt-6"
+								placeholder="E-Posta"
+							/>
+							<ErrorMessage
+								name="email"
+								render={(error) => (
+									<label style={{ color: "red" }}>{error}</label>
+								)}
+							/>
+							<Field
+								name="password"
+								className="form-control mt-6"
+								type="password"
+								placeholder="Şifre"
+							/>
+							<ErrorMessage
+								name="password"
+								render={(error) => (
+									<label style={{ color: "red" }}>{error}</label>
+								)}
+							/>
+							<button type="submit" className="btn btn-primary w-100 mt-6">
+								Giriş Yap
+							</button>
+							<label>
+								<small>
+									<p
+										className="text-decoration-none text-muted mt-5 d-block"
+										style={{ cursor: "pointer" }}
+									>
+										Şifremi Unuttum
+									</p>
+								</small>
+							</label>
+						</Form>
+					</Formik>
 					<div className="col-12 mt-6">
 						<label>
 							<small>
 								Henüz üye değil misin?
 								<a
 									className="text-decoration-none text-muted fw-bold"
-									href="/kayit-ol"
+									href="/register"
 								>
 									{" "}
 									Kayıt Ol
@@ -135,7 +134,6 @@ const Login: React.FC = () => {
 				</div>
 			</div>
 		</div>
-
 	);
 };
 

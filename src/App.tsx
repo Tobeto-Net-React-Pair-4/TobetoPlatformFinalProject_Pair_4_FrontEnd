@@ -11,61 +11,70 @@ import Platform from "./pages/Platform/Platform";
 import Navi from "./components/Navi/Navi";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Homepage from "./pages/Homepage/Homepage";
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Banner />
-                <CustomNavbar />
-                <Footer />
-              </>
-            }
-          />
+	return (
+		<div>
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<>
+								<Banner />
+								<CustomNavbar />
+								<Footer />
+							</>
+						}
+					/>
 
-          <Route
-            path="/login"
-            element={
-              <>
-                <Banner />
-                <CustomNavbar />
-                <Login />
-                <LoginFooter />
-              </>
-            }
-          />
+					<Route
+						path="/login"
+						element={
+							<>
+								<Banner />
+								<CustomNavbar />
+								<Login />
+								<LoginFooter />
+							</>
+						}
+					/>
 
-          <Route
-            path="/register"
-            element={
-              <>
-                <Banner />
-                <CustomNavbar />
-                <Register />
-                <LoginFooter />
-              </>
-            }
-          />
+					<Route
+						path="/register"
+						element={
+							<>
+								<Banner />
+								<CustomNavbar />
+								<Register />
+								<LoginFooter />
+							</>
+						}
+					/>
 
-          <Route
-            path="/platform"
-            element={
-              <>
-                <Navi />
-                <Platform />
-                {/* <Footer /> */}
-              </>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+					<Route
+						path="/platform"
+						element={
+							<>
+								<Navi />
+								<Platform />
+								{/* <Footer /> */}
+							</>
+						}
+					/>
+					{/*<Route
+						path="/homepage"
+						element={
+							<>
+								<Homepage />
+							</>
+						}
+					/>*/}
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 };
 
 export default App;

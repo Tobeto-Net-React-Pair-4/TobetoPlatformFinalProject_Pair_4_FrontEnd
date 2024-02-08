@@ -10,7 +10,12 @@ const getInitialState = () => {
 const authSlice = createSlice({
 	name: "auth",
 	initialState: getInitialState(),
-	reducers: {},
+	reducers: {
+		login: (state) => {
+			state.isAuthenticated = tokenService.hasToken();
+			state.isAuthenticated = true;
+		},
+	},
 });
 
 export const authReducer = authSlice.reducer;

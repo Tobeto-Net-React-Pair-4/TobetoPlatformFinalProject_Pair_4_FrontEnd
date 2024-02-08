@@ -34,7 +34,7 @@ const App: React.FC = () => {
               <>
                 <Banner />
                 <CustomNavbar />
-                <Login/>
+                <Login />
                 <LoginFooter />
               </>
             }
@@ -58,7 +58,7 @@ const App: React.FC = () => {
               <>
                 <Navi />
                 <Platform />
-                <Footer />
+                {/* <Footer /> */}
               </>
             }
           />

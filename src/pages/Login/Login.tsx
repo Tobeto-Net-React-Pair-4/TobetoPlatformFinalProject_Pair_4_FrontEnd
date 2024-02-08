@@ -1,37 +1,37 @@
-import { Container, Row, Col, Form, Button, Image, Alert } from "react-bootstrap";
+import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useNavigate } from "react-router-dom";
+import { HttpStatusCode } from "axios";
+import * as Yup from "yup";
+import toastr from "toastr";
 import "./Login.css";
+import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
-import axios from "axios";
-import { useState } from "react";
-import { LoginRequestModel } from "../../models/requests/login/LoginRequestModel";
+import { LoginCredentials } from "../../models/requests/login/loginCredentials";
 
 const Login: React.FC = () => {
-	const [formData, setFormData] = useState<LoginRequestModel>({
-		email: "",
-		password: "",
+	const navigate = useNavigate();
+
+	const validationSchema = Yup.object().shape({
+		email: Yup.string().required("Doldurulması zorunlu alan*"),
+		password: Yup.string().required("Doldurulması zorunlu alan*"),
 	});
 
-	const [error, setError] = useState<string>('');
-
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value,
+	const OnSubmit = async (values: LoginCredentials) => {
+		const response = await authService.login({
+			email: values.email,
+			password: values.password,
 		});
-	};
-
-	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		try {
-			const response = await axios.post(
-				"http://localhost:31348/api/Auths/login",
-				formData
-			);
-			console.log("Giriş başarılı", response.data);
-		} catch (error) {
-			console.error("Giriş başarısız: ", error);
-			setError(error.response.data.detail);
+		if (response.status == HttpStatusCode.Ok) {
+			localStorage.setItem("token", JSON.stringify({ ...response.data }));
+			navigate("/platform");
+			console.log("toastre başarılı giriş");
+			toastr.success("Giriş başarılı.");
+		} else {
+			console.log("hatalııııı nerde toastr");
+			toastr.error("Hatalı giriş");
+			toastr.warning("aloooo");
 		}
 	};
 
@@ -54,32 +54,43 @@ const Login: React.FC = () => {
 						</Col>
 					</Col>
 					<Col>
-					{error && <Alert variant="danger">{error}</Alert>}
-						<Form onSubmit={handleSubmit} className="form-animated-border">
-							<Form.Group className="mb-3">
-								<Form.Control
-									className="form-control mt-6"
-									type="email"
+						<Formik
+							className="form-animated-border"
+							initialValues={{ email: "", password: "" }}
+							onSubmit={(values: LoginCredentials) => {
+								OnSubmit(values);
+							}}
+							validationSchema={validationSchema}
+						>
+							<Form data-hs-cf-bound="true">
+								<Field
 									name="email"
-									placeholder="Email adresi"
-									value={formData.email}
-									onChange={handleChange}
+									className="form-control mt-6"
+									placeholder="E-Posta"
 								/>
-							</Form.Group>
-							<Form.Group className="mb-3">
-								<Form.Control
+								<ErrorMessage
+									name="email"
+									render={(error) => (
+										<label style={{ color: "red" }}>{error}</label>
+									)}
+								/>
+								<Field
+									name="password"
 									className="form-control mt-6"
 									type="password"
-									name="password"
 									placeholder="Şifre"
-									value={formData.password}
-									onChange={handleChange}
 								/>
-							</Form.Group>
-							<Button type="submit" className="btn btn-primary w-100 mt-6">
-								Giriş Yap
-							</Button>
-						</Form>
+								<ErrorMessage
+									name="password"
+									render={(error) => (
+										<label style={{ color: "red" }}>{error}</label>
+									)}
+								/>
+								<Button type="submit" className="btn btn-primary w-100 mt-6">
+									<b>Giriş Yap</b>
+								</Button>
+							</Form>
+						</Formik>
 					</Col>
 					<label>
 						<small>

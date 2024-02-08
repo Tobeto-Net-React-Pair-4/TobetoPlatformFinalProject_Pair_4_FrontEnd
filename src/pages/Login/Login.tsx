@@ -1,8 +1,33 @@
 import "./Login.css";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
+import axios from 'axios';
+import React, { useState } from 'react';
+import  {Link}  from "react-router-dom";
+
+
 
 const Login = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:31348/api/Auths/login",
+        {
+          email: email,
+        }
+          password: password
+      );
+      console.log("Login success:", response.data);
+    } catch (error) {
+      // handle successful login, e.g., redirect to dashboard
+      setError("Giriş başarısız. Lütfen tekrar deneyin.");
+      console.error("Login error:", error);
+    }
+  };
 	return (
 		<div className="row equal-col">
 			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12">
@@ -20,14 +45,19 @@ const Login = () => {
 							name="email"
 							className="form-control mt-6"
 							placeholder="E-Posta"
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
 						/>
 						<input
 							name="password"
 							className="form-control mt-6"
 							type="password"
 							placeholder="Şifre"
+					       value={password}
+                			onChange={(e) => setPassword(e.target.value)}
 						/>
-						<button className="btn btn-primary w-100 mt-6">Giriş Yap</button>
+						{error && <p className="text-danger mt-2"><strong>{error}</strong></p>}
+						<button className="btn btn-primary w-100 mt-6" onClick={handleLogin}>Giriş Yap</button>
 						<label>
 							<small>
 								<p

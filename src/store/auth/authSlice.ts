@@ -13,7 +13,6 @@ const authSlice = createSlice({
 	reducers: {
 		login: (state) => {
 			state.isAuthenticated = tokenService.hasToken();
-			state.isAuthenticated = true;
 		},
 	},
 });

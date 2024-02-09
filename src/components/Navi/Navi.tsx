@@ -9,10 +9,12 @@ import {
 	Image,
 } from "react-bootstrap";
 import "./Navi.css";
+import { useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
 
 const Navi: React.FC = () => {
+	const navigate = useNavigate();
 	const [show, setShow] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 
@@ -29,6 +31,12 @@ const Navi: React.FC = () => {
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+
+	const handleLogout = () => {
+		localStorage.removeItem("token");
+		navigate("/login");
+		toastr.success("Çıkış başarılı", "YEEEEEEHU");
+	};
 
 	return (
 		<>
@@ -127,7 +135,9 @@ const Navi: React.FC = () => {
 											<Dropdown.Menu className="profile">
 												<Dropdown.Item href="#">Profil Bilgileri</Dropdown.Item>
 												<Dropdown.Divider />
-												<Dropdown.Item href="#">Oturumu Kapat</Dropdown.Item>
+												<Dropdown.Item href="#" onClick={handleLogout}>
+													Oturumu Kapat
+												</Dropdown.Item>
 											</Dropdown.Menu>
 										</Dropdown>
 									</div>

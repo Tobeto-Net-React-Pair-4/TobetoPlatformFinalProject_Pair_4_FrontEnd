@@ -10,9 +10,7 @@ import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 
-type Props = {};
-
-const Login: React.FC = (props: Props) => {
+const Login: React.FC = () => {
 	const navigate = useNavigate();
 
 	const validationSchema = Yup.object().shape({
@@ -30,8 +28,6 @@ const Login: React.FC = (props: Props) => {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
-		} else {
-			toastr.error("Giriş başarısız", "HAYDAAA");
 		}
 	};
 
@@ -58,6 +54,7 @@ const Login: React.FC = (props: Props) => {
 						<Form data-hs-cf-bound="true">
 							<Field
 								name="email"
+								type="email"
 								className="form-control mt-6"
 								placeholder="E-Posta"
 							/>

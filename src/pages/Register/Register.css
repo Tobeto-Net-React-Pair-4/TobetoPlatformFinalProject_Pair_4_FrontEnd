@@ -1,5 +1,7 @@
-.ik-banner-big{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+@import'toastr';
+
+.ik-banner-big {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }

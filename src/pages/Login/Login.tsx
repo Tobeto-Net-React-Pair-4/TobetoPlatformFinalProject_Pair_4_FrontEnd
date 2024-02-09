@@ -9,7 +9,6 @@ import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
-import { ToastContainer, toast } from "react-toastify";
 
 type Props = {};
 
@@ -26,15 +25,13 @@ const Login: React.FC = (props: Props) => {
 			email: values.email,
 			password: values.password,
 		});
-		console.log(response);
+		console.log(response.data);
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			navigate("/platform");
-			console.log("toastre başarılı giriş");
-			toastr.success("Giriş başarılı.");
+			toastr.success("Giriş başarılı", "YEEEEEE");
 		} else {
-			console.log("hatalııııı nerde toastr");
-			toastr.error("aboooovvv");
+			toastr.error("Giriş başarısız", "HAYDAAA");
 		}
 	};
 

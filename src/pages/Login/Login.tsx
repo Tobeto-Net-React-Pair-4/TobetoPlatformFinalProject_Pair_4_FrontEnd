@@ -8,10 +8,12 @@ import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
-import { LoginCredentials } from "../../models/requests/login/loginCredentials";
+import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 import { ToastContainer, toast } from "react-toastify";
 
-const Login: React.FC = () => {
+type Props = {};
+
+const Login: React.FC = (props: Props) => {
 	const navigate = useNavigate();
 
 	const validationSchema = Yup.object().shape({
@@ -24,20 +26,20 @@ const Login: React.FC = () => {
 			email: values.email,
 			password: values.password,
 		});
+		console.log(response);
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			navigate("/platform");
 			console.log("toastre başarılı giriş");
-			toast.success("Giriş başarılı.");
+			toastr.success("Giriş başarılı.");
 		} else {
 			console.log("hatalııııı nerde toastr");
-			toast.error("aboooovvv");
+			toastr.error("aboooovvv");
 		}
 	};
 
 	return (
 		<div className="row equal-col">
-			<ToastContainer />
 			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12">
 				<div className="py-4 px-sm-0 px-md-12 text-center">
 					<div className="d-flex flex-column align-items-center">
@@ -111,7 +113,6 @@ const Login: React.FC = () => {
 					</div>
 				</div>
 			</div>
-
 			<div className="col-md-6 col-12 btn-rainbow-card-ik">
 				<div className="ik-banner-big h-100">
 					<img

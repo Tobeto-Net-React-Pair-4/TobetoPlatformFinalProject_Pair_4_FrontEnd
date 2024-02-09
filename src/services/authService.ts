@@ -1,9 +1,9 @@
 import { AxiosResponse } from "axios";
 import axiosInstance from "../core/interceptors/axiosInceptor";
-import { LoginCredentials } from "../models/requests/login/loginCredentials";
-import { RegisterCredentials } from "../models/requests/register/registerCredentials";
-import { RegisterResponse } from "../models/responses/register/registerResponse";
-import { LoginResponse } from "../models/responses/login/loginResponse";
+import { LoginCredentials } from "../models/requests/auth/loginCredentials";
+import { RegisterCredentials } from "../models/requests/auth/registerCredentials";
+import { RegisterResponse } from "../models/responses/auth/registerResponse";
+import { LoginResponse } from "../models/responses/auth/loginResponse";
 
 const loginUrl = "Auths/login";
 const registerUrl = "Auths/register";

@@ -1,13 +1,14 @@
-import {AxiosResponse} from "axios";
+import { AxiosResponse } from "axios";
 import axiosInstance from "../interceptors/axiosInceptor";
 
 export class BaseService<
-	GetAllType,
-	GetByIdType,
+	GetAllResponseType,
+	GetResponseType,
 	AddRequestType,
 	AddResponseType,
 	UpdateRequestType,
 	UpdateResponseType,
+	DeleteResponseType
 > {
 	public apiUrl: string;
 
@@ -15,12 +16,14 @@ export class BaseService<
 		this.apiUrl = "";
 	}
 
-	getAll(): Promise<AxiosResponse<GetAllType, any>> {
-		return axiosInstance.get<GetAllType>(this.apiUrl);
+	getAll(): Promise<AxiosResponse<GetAllResponseType, any>> {
+		return axiosInstance.get<GetAllResponseType>(this.apiUrl + "/GetList");
 	}
 
-	getById(id: number): Promise<AxiosResponse<GetByIdType, any>> {
-		return axiosInstance.get<GetByIdType>(this.apiUrl + "/" + id);
+	getById(id: string): Promise<AxiosResponse<GetResponseType, any>> {
+		return axiosInstance.get<GetResponseType>(this.apiUrl + "/GetById", {
+			params: { Id: id },
+		});
 	}
 
 	add(request: AddRequestType): Promise<AxiosResponse<AddResponseType, any>> {
@@ -28,12 +31,17 @@ export class BaseService<
 	}
 
 	update(
-		request: UpdateRequestType,
+		request: UpdateRequestType
 	): Promise<AxiosResponse<UpdateResponseType, any>> {
-		return axiosInstance.put<UpdateResponseType>(this.apiUrl, request);
+		return axiosInstance.put<UpdateResponseType>(
+			this.apiUrl + "/Update",
+			request
+		);
 	}
 
-	delete(id: number) {
-		return axiosInstance.delete(this.apiUrl + "/" + id);
+	delete(id: string): Promise<AxiosResponse<DeleteResponseType, any>> {
+		return axiosInstance.delete<DeleteResponseType>(
+			this.apiUrl + "/Delete" + id
+		);
 	}
 }

@@ -8,9 +8,12 @@ import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 
 const Login: React.FC = () => {
+	//const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const validationSchema = Yup.object().shape({
@@ -26,6 +29,7 @@ const Login: React.FC = () => {
 		console.log(response.data);
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
+			//dispatch(login());
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
 		}

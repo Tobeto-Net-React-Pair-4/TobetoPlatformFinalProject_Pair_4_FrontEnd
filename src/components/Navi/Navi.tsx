@@ -8,12 +8,15 @@ import {
 	ButtonGroup,
 	Image,
 } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { logout } from "../../store/auth/authSlice";
 import "./Navi.css";
 import { useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
 
 const Navi: React.FC = () => {
+	//const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const [show, setShow] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
@@ -34,6 +37,7 @@ const Navi: React.FC = () => {
 
 	const handleLogout = () => {
 		localStorage.removeItem("token");
+		//dispatch(logout());
 		navigate("/login");
 		toastr.success("Çıkış başarılı", "YEEEEEEHU");
 	};

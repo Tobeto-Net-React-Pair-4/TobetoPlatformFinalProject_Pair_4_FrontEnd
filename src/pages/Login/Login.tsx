@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { HttpStatusCode } from "axios";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
@@ -95,13 +96,10 @@ const Login: React.FC = () => {
 						<label>
 							<small>
 								Henüz üye değil misin?
-								<a
-									className="text-decoration-none text-muted fw-bold"
-									href="/register"
-								>
-									{" "}
-									Kayıt Ol
-								</a>
+								<Link to="/Register" className="text-decoration-none text-muted ">
+								{" "}
+								<b>Kayıt Ol</b>
+								</Link>
 							</small>
 						</label>
 					</div>

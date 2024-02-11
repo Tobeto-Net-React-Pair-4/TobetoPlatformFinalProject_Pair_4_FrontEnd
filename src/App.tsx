@@ -34,12 +34,8 @@ const App: React.FC = () => {
 						path="/login"
 						element={
 							<>
-							<div>
 								<Banner />
-							</div>
-							<div>
 							     <CustomNavbar />
-							</div>
 							<div className="login-center">
 								<Login />
 							</div>

@@ -33,7 +33,7 @@ const Login: React.FC = () => {
 
 	return (
 		<div className="row equal-col">
-			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12">
+			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12 ">
 				<div className="py-4 px-sm-0 px-md-12 text-center">
 					<div className="d-flex flex-column align-items-center">
 						<img
@@ -108,7 +108,7 @@ const Login: React.FC = () => {
 				</div>
 			</div>
 			<div className="col-md-6 col-12 btn-rainbow-card-ik">
-				<div className="ik-banner-big h-100">
+				<div className="ik-banner-big h-100 flex-column">
 					<img
 						alt="İstanbul Kodluyor Logo"
 						src={IstLogo}

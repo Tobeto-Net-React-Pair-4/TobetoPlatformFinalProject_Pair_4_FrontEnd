@@ -212,7 +212,9 @@ const Navi: React.FC = () => {
 							<Dropdown.Menu className="profile">
 								<Dropdown.Item href="#">Profil Bilgileri</Dropdown.Item>
 								<Dropdown.Divider />
-								<Dropdown.Item href="#">Oturumu Kapat</Dropdown.Item>
+								<Dropdown.Item href="#" onClick={handleLogout}>
+									Oturumu Kapat
+								</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
 					</div>

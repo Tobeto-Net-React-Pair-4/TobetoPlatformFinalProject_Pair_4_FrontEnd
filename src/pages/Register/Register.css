@@ -5,3 +5,8 @@
 	flex-direction: row;
 	align-items: center;
 }
+
+.register-center{
+	height: 50%;
+	margin-top: 200px;
+}

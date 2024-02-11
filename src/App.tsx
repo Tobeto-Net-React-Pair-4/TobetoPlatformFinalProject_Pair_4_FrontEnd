@@ -34,9 +34,15 @@ const App: React.FC = () => {
 						path="/login"
 						element={
 							<>
+							<div>
 								<Banner />
-								<CustomNavbar />
+							</div>
+							<div>
+							     <CustomNavbar />
+							</div>
+							<div className="login-center">
 								<Login />
+							</div>
 								<LoginFooter />
 							</>
 						}
@@ -48,7 +54,9 @@ const App: React.FC = () => {
 							<>
 								<Banner />
 								<CustomNavbar />
+							<div className="register-center">
 								<Register />
+							</div>
 								<LoginFooter />
 							</>
 						}

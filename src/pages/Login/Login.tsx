@@ -3,15 +3,21 @@ import * as Yup from "yup";
 import { HttpStatusCode } from "axios";
 import { useNavigate } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
+import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
+import userService from "../../services/userService";
+import { setUser } from "../../store/platform/platformSlice";
+import { useDispatch } from "react-redux";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const validationSchema = Yup.object().shape({
 		email: Yup.string().required("Doldurulması zorunlu alan*"),
@@ -26,6 +32,9 @@ const Login: React.FC = () => {
 		console.log(response.data);
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
+			const userData = (await userService.getByMail(values.email)).data;
+			dispatch(login());
+			dispatch(setUser(userData));
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
 		}
@@ -33,7 +42,7 @@ const Login: React.FC = () => {
 
 	return (
 		<div className="row equal-col">
-			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12">
+			<div className="btn-rainbow-card mx-auto text-center col-md-6 col-12 ">
 				<div className="py-4 px-sm-0 px-md-12 text-center">
 					<div className="d-flex flex-column align-items-center">
 						<img
@@ -95,20 +104,20 @@ const Login: React.FC = () => {
 						<label>
 							<small>
 								Henüz üye değil misin?
-								<a
-									className="text-decoration-none text-muted fw-bold"
-									href="/register"
+								<Link
+									to="/Register"
+									className="text-decoration-none text-muted "
 								>
 									{" "}
-									Kayıt Ol
-								</a>
+									<b>Kayıt Ol</b>
+								</Link>
 							</small>
 						</label>
 					</div>
 				</div>
 			</div>
 			<div className="col-md-6 col-12 btn-rainbow-card-ik">
-				<div className="ik-banner-big h-100">
+				<div className="ik-banner-big h-100 flex-column">
 					<img
 						alt="İstanbul Kodluyor Logo"
 						src={IstLogo}

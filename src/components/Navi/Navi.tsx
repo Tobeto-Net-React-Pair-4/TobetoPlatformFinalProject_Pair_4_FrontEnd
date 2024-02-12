@@ -12,11 +12,17 @@ import "./Navi.css";
 import { useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
+import { logout } from "../../store/auth/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { removeUser } from "../../store/platform/platformSlice";
 
 const Navi: React.FC = () => {
+	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const [show, setShow] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
+
+	const user = useSelector((state: any) => state.platform.user);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -34,6 +40,9 @@ const Navi: React.FC = () => {
 
 	const handleLogout = () => {
 		localStorage.removeItem("token");
+		localStorage.removeItem("userData");
+		dispatch(logout());
+		dispatch(removeUser())
 		navigate("/login");
 		toastr.success("Çıkış başarılı", "YEEEEEEHU");
 	};
@@ -183,7 +192,9 @@ const Navi: React.FC = () => {
 									src={ppImage}
 									alt=""
 								/>
-								<p className="mb-0 name me-3">Alper Çırak</p>
+								<p className="mb-0 name me-3">
+									{user.firstName + " " + user.lastName}
+								</p>
 							</Button>
 
 							<Dropdown.Toggle
@@ -212,7 +223,9 @@ const Navi: React.FC = () => {
 							<Dropdown.Menu className="profile">
 								<Dropdown.Item href="#">Profil Bilgileri</Dropdown.Item>
 								<Dropdown.Divider />
-								<Dropdown.Item href="#">Oturumu Kapat</Dropdown.Item>
+								<Dropdown.Item href="#" onClick={handleLogout}>
+									Oturumu Kapat
+								</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
 					</div>

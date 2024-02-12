@@ -18,8 +18,11 @@ const platformSlice = createSlice({
 			state.user = action.payload;
 			localStorage.setItem("userData", JSON.stringify(action.payload));
 		},
+		removeUser(state) {
+			state.user = {} as GetUserResponse;
+		},
 	},
 });
 
-export const { setUser } = platformSlice.actions;
+export const { setUser, removeUser } = platformSlice.actions;
 export default platformSlice.reducer;

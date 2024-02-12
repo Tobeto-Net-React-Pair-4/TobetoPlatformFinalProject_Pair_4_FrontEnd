@@ -9,7 +9,11 @@ import authService from "../../services/authService";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import React from "react";
+import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
+import userService from "../../services/userService";
+import { setUser } from "../../store/platform/platformSlice";
+import store from "../../store/configureStore";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
@@ -27,6 +31,9 @@ const Login: React.FC = () => {
 		console.log(response.data);
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
+			const userData = (await userService.getByMail(values.email)).data;
+			store.dispatch(login());
+			store.dispatch(setUser(userData));
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
 		}

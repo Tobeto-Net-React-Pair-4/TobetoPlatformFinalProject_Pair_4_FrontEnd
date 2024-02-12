@@ -1,7 +1,7 @@
 import axios from "axios";
 import { BASE_API_URL } from "../../environment/environment";
 import tokenService from "../services/tokenService";
-import { store } from "../../store/configureStore";
+import store from "../../store/configureStore";
 import { addRequest, removeRequest } from "../../store/loading/loadingSlice";
 import { handleError } from "../errorHandlers/errorHandlers";
 

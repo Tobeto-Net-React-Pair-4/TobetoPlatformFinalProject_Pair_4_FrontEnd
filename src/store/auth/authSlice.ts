@@ -1,21 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 import tokenService from "../../core/services/tokenService";
 
-const getInitialState = () => {
-	if (tokenService.hasToken()) return { isAuthenticated: true };
+interface AuthState {
+	isAuthenticated: boolean;
+}
 
-	return { isAuthenticated: false };
+const initialState: AuthState = {
+	isAuthenticated: tokenService.hasToken(),
 };
 
 const authSlice = createSlice({
 	name: "auth",
-	initialState: getInitialState(),
+	initialState,
 	reducers: {
 		login: (state) => {
-			state.isAuthenticated = tokenService.hasToken();
+			state.isAuthenticated = true;
+		},
+		logout: (state) => {
+			state.isAuthenticated = false;
 		},
 	},
 });
 
 export const authReducer = authSlice.reducer;
-export const authActions = authSlice.actions;
+export const { login, logout } = authSlice.actions;

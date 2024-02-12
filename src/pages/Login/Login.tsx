@@ -13,10 +13,11 @@ import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 import userService from "../../services/userService";
 import { setUser } from "../../store/platform/platformSlice";
-import store from "../../store/configureStore";
+import { useDispatch } from "react-redux";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const validationSchema = Yup.object().shape({
 		email: Yup.string().required("Doldurulması zorunlu alan*"),
@@ -32,8 +33,8 @@ const Login: React.FC = () => {
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			const userData = (await userService.getByMail(values.email)).data;
-			store.dispatch(login());
-			store.dispatch(setUser(userData));
+			dispatch(login());
+			dispatch(setUser(userData));
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
 		}
@@ -103,9 +104,12 @@ const Login: React.FC = () => {
 						<label>
 							<small>
 								Henüz üye değil misin?
-								<Link to="/Register" className="text-decoration-none text-muted ">
-								{" "}
-								<b>Kayıt Ol</b>
+								<Link
+									to="/Register"
+									className="text-decoration-none text-muted "
+								>
+									{" "}
+									<b>Kayıt Ol</b>
 								</Link>
 							</small>
 						</label>

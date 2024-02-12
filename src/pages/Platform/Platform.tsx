@@ -10,12 +10,12 @@ import {
 import eduImage from "../Image/23_ANF_1_2fa2e5b117.jpg";
 import "../fonts/fonts.css";
 import "./Platform.css";
-import store from "../../store/configureStore";
+import { useSelector } from "react-redux";
 
 const LoginPlatform: React.FC = () => {
 	const [activeTab, setActiveTab] = useState<string>("basvurularim");
 
-	const user = store.getState().platform.user;
+	const user = useSelector((state: any) => state.platform.user);
 
 	const handleTabClick = (selectedKey: string | null) => {
 		if (selectedKey) {

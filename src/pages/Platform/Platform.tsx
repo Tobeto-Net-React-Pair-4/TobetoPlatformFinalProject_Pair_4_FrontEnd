@@ -10,9 +10,12 @@ import {
 import eduImage from "../Image/23_ANF_1_2fa2e5b117.jpg";
 import "../fonts/fonts.css";
 import "./Platform.css";
+import store from "../../store/configureStore";
 
 const LoginPlatform: React.FC = () => {
 	const [activeTab, setActiveTab] = useState<string>("basvurularim");
+
+	const user = store.getState().platform.user;
 
 	const handleTabClick = (selectedKey: string | null) => {
 		if (selectedKey) {
@@ -28,7 +31,7 @@ const LoginPlatform: React.FC = () => {
 						<h1 className="header-custom-welcome">
 							TOBETO
 							<span className="">
-								'ya hoş geldin <br></br> Alper Çırak
+								'ya hoş geldin <br></br> {user.firstName + " " + user.lastName}
 							</span>
 						</h1>
 						<p className="text-custom-welcome">

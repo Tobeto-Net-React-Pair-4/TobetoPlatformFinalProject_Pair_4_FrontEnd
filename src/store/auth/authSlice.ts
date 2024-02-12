@@ -22,15 +22,5 @@ const authSlice = createSlice({
 	},
 });
 
-//const authSlice = createSlice({
-//	name: "auth",
-//	initialState: getInitialState(),
-//	reducers: {
-//		login: (state) => {
-//			state.isAuthenticated = tokenService.hasToken();
-//		},
-//	},
-//});
-
 export const authReducer = authSlice.reducer;
 export const { login, logout } = authSlice.actions;

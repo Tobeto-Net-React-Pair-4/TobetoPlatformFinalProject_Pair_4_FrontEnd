@@ -22,6 +22,7 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					<>
 						<Banner />
 						<CustomNavbar />
+						<Footer />
 					</>
 				}
 			/>

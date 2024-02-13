@@ -43,7 +43,7 @@ const Navi: React.FC = () => {
 		localStorage.removeItem("userData");
 		dispatch(logout());
 		dispatch(removeUser());
-		navigate("/login");
+		navigate("/giris");
 		toastr.success("Çıkış başarılı", "YEEEEEEHU");
 	};
 

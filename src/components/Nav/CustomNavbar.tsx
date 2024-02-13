@@ -71,7 +71,7 @@ const CustomNavbar = () => {
 							</NavDropdown>
 						</Nav>
 						<Nav className="d-flex justify-content-end">
-							<Nav.Link href="/login" className="me-2">
+							<Nav.Link href="/giris" className="me-2">
 								<Button className="navb-btn" variant="text-light border-light">
 									Giriş Yap
 								</Button>

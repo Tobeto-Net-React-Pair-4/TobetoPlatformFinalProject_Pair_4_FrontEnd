@@ -32,7 +32,9 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					<>
 						<Banner />
 						<CustomNavbar />
-						<Login />
+						<div className="login-center">
+							<Login />
+						</div>
 						<LoginFooter />
 					</>
 				}
@@ -43,7 +45,9 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					<>
 						<Banner />
 						<CustomNavbar />
-						<Register />
+						<div className="register-center">
+							<Register />
+						</div>
 						<LoginFooter />
 					</>
 				}

@@ -150,7 +150,7 @@ const Register: React.FC = () => {
             </Button> */}
 						<label>
 							Zaten bir hesabın var mı?
-							<Link to="/Login" className="text-decoration-none text-muted ">
+							<Link to="/giris" className="text-decoration-none text-muted ">
 								{" "}
 								<b>Giriş Yap</b>
 							</Link>

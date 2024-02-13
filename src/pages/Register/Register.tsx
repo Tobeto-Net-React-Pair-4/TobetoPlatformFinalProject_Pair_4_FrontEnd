@@ -11,7 +11,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import toastr from "toastr";
 
 const Register: React.FC = () => {
-	const navigate = useNavigate();
+	//const navigate = useNavigate();
 
 	const validationSchema = Yup.object().shape({
 		firstName: Yup.string().required("Doldurulması zorunlu alan*"),

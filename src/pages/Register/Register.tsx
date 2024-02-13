@@ -159,7 +159,7 @@ const Register: React.FC = () => {
 				</Col>
 
 				<Col className="col-lg-5 col-md-6 col-xs-12 btn-rainbow-card-ik ">
-					<Col className="ik-banner-big h-100">
+					<Col className="ik-banner-big2 h-100">
 						<Col>
 							<Image
 								src={IstLogo}

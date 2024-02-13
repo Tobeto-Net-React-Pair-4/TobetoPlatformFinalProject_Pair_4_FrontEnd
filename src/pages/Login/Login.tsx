@@ -1,17 +1,14 @@
-import toastr from "toastr";
-import * as Yup from "yup";
-import { HttpStatusCode } from "axios";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
 import "./Login.css";
-import authService from "../../services/authService";
+import { useAuth } from "../../hooks/useAuth"; // useAuth hook'unu import edin
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
-import React from "react";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 
 const Login: React.FC = () => {
-	const navigate = useNavigate();
+	const { login } = useAuth();
 
 	const validationSchema = Yup.object().shape({
 		email: Yup.string().required("Doldurulması zorunlu alan*"),
@@ -19,16 +16,7 @@ const Login: React.FC = () => {
 	});
 
 	const OnSubmit = async (values: LoginCredentials) => {
-		const response = await authService.login({
-			email: values.email,
-			password: values.password,
-		});
-		console.log(response.data);
-		if (response.status == HttpStatusCode.Ok) {
-			localStorage.setItem("token", JSON.stringify({ ...response.data }));
-			navigate("/platform");
-			toastr.success("Giriş başarılı", "YEEEEEE");
-		}
+		login(values.email, values.password);
 	};
 
 	return (

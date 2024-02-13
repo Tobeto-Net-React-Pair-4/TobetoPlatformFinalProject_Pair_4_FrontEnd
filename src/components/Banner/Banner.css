@@ -1,32 +1,32 @@
 .banner-background {
-  background-color: #1e0f41;
-  padding: 20px 0;
+	background-color: #1e0f41;
+	padding: 20px 0;
 }
 span {
-  color: rgb(0, 176, 120);
+	color: rgb(0, 176, 120);
 }
 .custom-btn {
-  background: #00b078 !important;
-  border: 3px solid #00b078 !important;
-  border-radius: 2em !important;
-  padding: 0.5em 2em !important;
-  font-size: 14px !important;
-  font-weight: bold !important;
-  color: #1e0f41 !important;
-  line-height: 18px !important;
-  min-width: 140px !important;
+	background: #00b078 !important;
+	border: 3px solid #00b078 !important;
+	border-radius: 2em !important;
+	padding: 0.5em 2em !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	color: #1e0f41 !important;
+	line-height: 18px !important;
+	min-width: 140px !important;
 }
 
 .logo {
-  color: #00bfa6;
-  font-weight: bold;
+	color: #00bfa6;
+	font-weight: bold;
 }
 
 .banner-text {
-  color: #fff;
-  font-size: 1.5em;
+	color: #fff;
+	font-size: 1.5em;
 }
 
 .custom-btn:hover {
-  background-color: #00897b;
+	background-color: #00897b;
 }

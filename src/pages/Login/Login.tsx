@@ -2,21 +2,16 @@ import React from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "./Login.css";
-import { useAuth } from "../../hooks/useAuth"; // useAuth hook'unu import edin
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 
 const Login: React.FC = () => {
-	const { login } = useAuth();
-
 	const validationSchema = Yup.object().shape({
 		email: Yup.string().required("Doldurulması zorunlu alan*"),
 		password: Yup.string().required("Doldurulması zorunlu alan*"),
 	});
 
-	const OnSubmit = async (values: LoginCredentials) => {
-		login(values.email, values.password);
 	};
 
 	return (

@@ -12,6 +12,7 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import TrainingSection from "../TrainingSection/TrainingSection";
 import AnnouncementSection from "../AnnouncementSection/AnnouncementSection";
+import ForeignLanguage from "../../pages/ForeignLanguage/ForeignLanguage";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	return (
@@ -77,6 +78,15 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					<>
 						<Navi />
 						<AnnouncementSection />
+					</>
+				}
+			/>
+			<Route
+				path="/diller"
+				element={
+					<>
+						<Navi />
+						<ForeignLanguage />
 					</>
 				}
 			/>

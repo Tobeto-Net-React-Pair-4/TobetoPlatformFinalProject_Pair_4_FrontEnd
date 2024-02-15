@@ -14,6 +14,7 @@ import Register from "./pages/Register/Register";
 import PasswordReset from "./pages/PasswordReset/PassworReset";
 import Homepage from "./pages/Homepage/Homepage";
 import { OverlayLoader } from "./components/OverlayLoader/OverlayLoader";
+import IstanbulKodluyor from "./pages/IstanbulKodluyor/IstanbulKodluyor";
 
 const App: React.FC = () => {
 	return (
@@ -87,6 +88,14 @@ const App: React.FC = () => {
 							</>
 						}
 					/>*/}
+				<Route
+					path="/istanbul-kodluyor"
+					element={
+						<IstanbulKodluyor/>
+					}
+				/>
+					
+				
 			</Routes>
 		</div>
 	);

@@ -10,13 +10,11 @@ export default class MenuExampleVerticalText extends Component {
       this.setState({ activeItem: name });
     }
   }
-
   render() {
     const { activeItem } = this.state;
-
     return (
       <Menu text vertical>
-        <Menu.Item header>Sort By</Menu.Item>
+        <Menu.Item header>profil nav bar</Menu.Item>
         <Menu.Item
           name='closest'
           active={activeItem === 'closest'}

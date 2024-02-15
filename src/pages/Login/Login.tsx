@@ -104,7 +104,7 @@ const Login: React.FC = () => {
 							<small>
 								Henüz üye değil misin?
 								<Link
-									to="/Register"
+									to="/kayit-ol"
 									className="text-decoration-none text-muted "
 								>
 									{" "}

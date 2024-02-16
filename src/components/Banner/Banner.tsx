@@ -8,7 +8,7 @@ const Banner: React.FC = () => {
 		<div className="banner-background">
 			<Container>
 				<Row className="align-items-center justify-content-between">
-					<Col lg={1} md={5} sm={12}>
+					<Col lg={1} sm={12}>
 						<Image
 							src={logoIst}
 							className=" me-2"

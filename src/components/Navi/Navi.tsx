@@ -42,8 +42,8 @@ const Navi: React.FC = () => {
 		localStorage.removeItem("token");
 		localStorage.removeItem("userData");
 		dispatch(logout());
-		dispatch(removeUser())
-		navigate("/login");
+		dispatch(removeUser());
+		navigate("/giris");
 		toastr.success("Çıkış başarılı", "YEEEEEEHU");
 	};
 
@@ -115,7 +115,9 @@ const Navi: React.FC = () => {
 													src={ppImage}
 													alt=""
 												/>
-												<p className="mb-0 name me-3">Alper Çırak</p>
+												<p className="mb-0 name me-3">
+													{user.firstName + " " + user.lastName}
+												</p>
 											</Button>
 
 											<Dropdown.Toggle
@@ -133,8 +135,8 @@ const Navi: React.FC = () => {
 													xmlns="http://www.w3.org/2000/svg"
 												>
 													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
+														fillRule="evenodd"
+														clipRule="evenodd"
 														d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
 														fill="#828282"
 													></path>
@@ -212,8 +214,8 @@ const Navi: React.FC = () => {
 									xmlns="http://www.w3.org/2000/svg"
 								>
 									<path
-										fill-rule="evenodd"
-										clip-rule="evenodd"
+										fillRule="evenodd"
+										clipRule="evenodd"
 										d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
 										fill="#828282"
 									></path>

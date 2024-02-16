@@ -30,7 +30,7 @@ h6 {
 	color: var(--bs-heading-color);
 }
 .row-custom-welcome {
-	padding: 2rem 0;
+	padding: 10rem 0;
 }
 
 .header-custom-welcome {
@@ -259,6 +259,7 @@ h6 {
 	margin-top: 15px;
 	margin-left: 7px;
 	height: 130px;
+	width: 32em !important;
 	border-radius: 12px;
 	-webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
@@ -474,7 +475,7 @@ h6 {
 
 .tbt-exam-box {
 	background: #ffffff;
-	width: 1235px;
+	width: 1113px;
 	border-radius: 10px;
 	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
 	justify-content: space-between;

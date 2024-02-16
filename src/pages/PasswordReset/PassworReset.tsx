@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import React, { useState } from 'react';
 import axios from 'axios';
 import './PasswordReset.css';
@@ -40,7 +40,7 @@ const PasswordReset = () => {
                     <Col md="auto">
                         <Form onSubmit={handleSubmit} >
                         
-                            <h1 >Reset Your Password</h1>
+                            <h1 >Şifreyi sıfırla</h1>
                             <Form.Group controlId="email">
                                 <Form.Control
                                     type="email"

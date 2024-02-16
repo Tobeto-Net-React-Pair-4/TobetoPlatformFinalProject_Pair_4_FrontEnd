@@ -1,6 +1,6 @@
-@import'toastr';
+@import "toastr";
 
-.ik-banner-big {
+.ik-banner-big2 {
 	display: flex;
 	flex-direction: row;
 	align-items: center;

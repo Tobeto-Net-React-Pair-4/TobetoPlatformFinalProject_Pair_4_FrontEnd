@@ -13,6 +13,7 @@ import Register from "../../pages/Register/Register";
 import TrainingSection from "../TrainingSection/TrainingSection";
 import AnnouncementSection from "../AnnouncementSection/AnnouncementSection";
 import ForeignLanguage from "../../pages/ForeignLanguage/ForeignLanguage";
+import "../../fonts/fonts.css";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	return (

@@ -14,6 +14,7 @@ import TrainingSection from "../TrainingSection/TrainingSection";
 import AnnouncementSection from "../AnnouncementSection/AnnouncementSection";
 import ForeignLanguage from "../../pages/ForeignLanguage/ForeignLanguage";
 import "../../fonts/fonts.css";
+import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	return (
@@ -89,8 +90,19 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 						<Navi />
 						<ForeignLanguage />
 					</>
+
 				}
 			/>
+			<Route
+				path="/istanbul-kodluyor"
+				element={
+					<>
+						<IstanbulKodluyor/>
+					</>
+
+				}
+			/>
+
 			<Route path="/about" element={<About />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>

@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import EducationButton from '../../components/IstanbulKodluyor/EducationButton'
 import Faqs from '../../components/IstanbulKodluyor/Faqs'
 import { faqs } from '../../utilities/constants/faqs'
+import RegisterForm from '../../components/RegisterForm/RegisterForm'
 
 type Props = {}
 
@@ -15,10 +16,9 @@ const IstanbulKodluyor = (props: Props) => {
             <Row className='bg-darkblue'>
                 <img className='ik-logo' src="../../../public/assets/images/istkodluyorlogo.svg" alt="İstanbul Kodluyor" />
                 <div className="col-12 d-flex flex-column justify-content-center px-10 text-center">
-                    <span className="header-text-md mt-4 ">Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini al.</span>
-                    <span className="header-text mt-8 mb-10">Aradığın <span className="quot">&nbsp;“</span>İş<span className="quot">”&nbsp;</span> Burada!</span>
+                    <span className="header-text-md mt-5 mb-5 ">Ücretsiz eğitimlerle, geleceğin mesleklerinde sen de yerini al.</span>
+                    <span className="header-text mt-8 mb-5">Aradığın <span className="quot">&nbsp;“</span>İş<span className="quot">”&nbsp;</span> Burada!</span>
                 </div>
-
             </Row>
             <Row className='bg-lightgreen'>
                 <div className='col-12 istk-md-text'>
@@ -31,7 +31,7 @@ const IstanbulKodluyor = (props: Props) => {
                 </div>
             </Row>
             <Row>
-                <Col className='col-md-6 col-12 bg-lightblue d-flex justify-content-center'>
+                <Col className='col-6 bg-lightblue d-flex justify-content-center'>
                     <p className="text-center ic-header">
                         Yazılım ve teknoloji alanında yeni bir kariyere adım atmak istiyorsan
                     </p>
@@ -71,22 +71,8 @@ const IstanbulKodluyor = (props: Props) => {
                     </div>
                 </Col>
 
-                <Col className='col-md-6 col-12 bg-lightgray '>
-
-                    <div id="kayitFormu">
-                        <h3 className="mt-6 mb-8">Hemen Kayıt Ol</h3>
-                        <input name="firstName" className="form-control mt-6" type="text" placeholder="Ad*" />
-                        <input name="lastName" className="form-control mt-6" type="text" placeholder="Soyad*" />
-                        <input name="email" className="form-control mt-6" type="email" placeholder="E-Posta*" />
-                        <input name="password" className="form-control mt-6" type="password" placeholder="Şifre*" />
-                        <input name="passwordAgain" className="form-control mt-6" type="password" placeholder="Şifre Tekrar*" />
-                        <button className="btn btn-primary w-100 mt-6">Kayıt Ol</button>
-                        <div className="col-12 mt-6">
-                            <label>
-                                <small>Zaten bir hesabın var mı?<a className="text-decoration-none text-muted fw-bold" href="/giris"> Giriş Yap</a></small>
-                            </label>
-                        </div>
-                    </div>
+                <Col className=' col-6 bg-lightgray'>
+                    <RegisterForm/>
                 </Col>
             </Row>
             <Row className='bg-lightgreen'>
@@ -100,16 +86,16 @@ const IstanbulKodluyor = (props: Props) => {
                 </div>
             </Row>
             <Row className='bg-darkblue'>
-                <span className="text-neon">SÜREÇ</span>
+                <span className="text-neon mt-5">SÜREÇ</span>
                 <div className="col-12 position-relative text-center">
                     <section className="ps-timeline-sec">
                         <div className="container-fluid">
                             <ol className="ps-timeline">
-                                <li><div className="ps-top"><p>Başvuru ve <br /> Ön-değerlendirme</p></div><span className="ps-sp-top">1</span></li>
-                                <li><div className="ps-bot"><p>"Herkes için Kodlama" Eğitimleri</p></div><span className="ps-sp-bot">2</span></li>
-                                <li><div className="ps-top"><p>Seçme ve Değerlendirme</p></div><span className="ps-sp-top">3</span></li>
-                                <li><div className="ps-bot"><p>Mesleki ve Profesyonel Gelişim Eğitimleri</p></div><span className="ps-sp-bot">4</span></li>
-                                <li><div className="ps-top"><p>İstihdam</p></div><span className="ps-sp-top">5</span></li>
+                                <li><div className="ps-top"><p>Başvuru ve <br /> Ön-değerlendirme</p></div><span className="ps-sp-top pt-2">1</span></li>
+                                <li><div className="ps-bot"><p>"Herkes için Kodlama" Eğitimleri</p></div><span className="ps-sp-bot pt-2">2</span></li>
+                                <li><div className="ps-top"><p>Seçme ve Değerlendirme</p></div><span className="ps-sp-top pt-2">3</span></li>
+                                <li><div className="ps-bot"><p>Mesleki ve Profesyonel Gelişim Eğitimleri</p></div><span className="ps-sp-bot pt-2">4</span></li>
+                                <li><div className="ps-top"><p>İstihdam</p></div><span className="ps-sp-top pt-2">5</span></li>
                             </ol>
                         </div>
                     </section>

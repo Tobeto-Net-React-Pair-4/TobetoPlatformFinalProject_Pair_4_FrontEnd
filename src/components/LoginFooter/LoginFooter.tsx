@@ -11,7 +11,7 @@ import "./LoginFooter.css";
 
 const LoginFooter: React.FC = () => {
   return (
-    <footer className="lf-footer text-center border-top">
+    <footer className="lf-footer text-center border-top bg-black">
       <Container>
         <Col className="col-12">
           <Row className="padding-tb-40 margin-row">

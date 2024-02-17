@@ -123,6 +123,7 @@ const Login: React.FC = () => {
 						style={{ maxWidth: "200px", height: "auto" }}
 						className="mx-auto"
 					/>
+					<span className="greenLine2"></span>
 					<div>
 						<span className="text-blue fw-bold">
 							Aradığın <span style={{ color: "rgb(0, 176, 120)" }}>"İş"</span>{" "}

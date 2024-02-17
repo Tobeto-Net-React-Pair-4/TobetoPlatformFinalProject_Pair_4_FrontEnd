@@ -44,7 +44,7 @@ const Register: React.FC = () => {
 
 	return (
 		<Container fluid className="container">
-			<Row className="container pt-20 row equal-col text-center ">
+			<Row className="container pt-20 row equal-col2 text-center ">
 				<Col
 					xs={6}
 					md={6}

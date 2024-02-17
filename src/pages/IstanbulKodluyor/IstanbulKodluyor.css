@@ -669,6 +669,10 @@
     box-shadow: none;
     padding: 0.6em;
 }
+.accordion{
+    --bs-accordion-border-color: none;
+    margin-bottom: 1em;
+}
 
 .accordion-button:focus {
     z-index: 3;

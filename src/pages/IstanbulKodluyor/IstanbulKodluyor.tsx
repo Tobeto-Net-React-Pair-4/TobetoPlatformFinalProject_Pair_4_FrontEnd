@@ -79,7 +79,7 @@ const IstanbulKodluyor = (props: Props) => {
                 <div className='header-left-2'>
                     <span className="header-left-text">İstanbul Kodluyor Projesi Hakkında </span>
                 </div>
-                <div className='col-12 mt-8'>
+                <div className='col-12 mt-8 yazilim-text'>
                     <p>
                         <b>Yazılım ve teknoloji</b> alanında meslek sahibi olmak isteyen genç yetişkinlere, <b>ücretsiz ve kapsamlı eğitimlerle</b> gerekli bilgi ve becerileri kazandıran, Türkiye’nin önde gelen kurumlarında <b>işe yerleşmelerini</b> sağlayan bir projedir. Teknoloji alanında nitelikli insan kaynağını geliştirmeyi amaçlayan bu proje, aynı zamanda <b>kadınların</b> sektördeki temsiliyetini artırmayı da hedeflemektedir.
                     </p>
@@ -91,11 +91,11 @@ const IstanbulKodluyor = (props: Props) => {
                     <section className="ps-timeline-sec">
                         <div className="container-fluid">
                             <ol className="ps-timeline">
-                                <li><div className="ps-top"><p>Başvuru ve <br /> Ön-değerlendirme</p></div><span className="ps-sp-top pt-2">1</span></li>
-                                <li><div className="ps-bot"><p>"Herkes için Kodlama" Eğitimleri</p></div><span className="ps-sp-bot pt-2">2</span></li>
-                                <li><div className="ps-top"><p>Seçme ve Değerlendirme</p></div><span className="ps-sp-top pt-2">3</span></li>
-                                <li><div className="ps-bot"><p>Mesleki ve Profesyonel Gelişim Eğitimleri</p></div><span className="ps-sp-bot pt-2">4</span></li>
-                                <li><div className="ps-top"><p>İstihdam</p></div><span className="ps-sp-top pt-2">5</span></li>
+                                <li><div className="ps-top"><p>Başvuru ve <br /> Ön-değerlendirme</p></div><span className="ps-sp-top">1</span></li>
+                                <li><div className="ps-bot"><p>"Herkes için Kodlama" Eğitimleri</p></div><span className="ps-sp-bot">2</span></li>
+                                <li><div className="ps-top"><p>Seçme ve Değerlendirme</p></div><span className="ps-sp-top">3</span></li>
+                                <li><div className="ps-bot"><p>Mesleki ve Profesyonel Gelişim Eğitimleri</p></div><span className="ps-sp-bot">4</span></li>
+                                <li><div className="ps-top"><p>İstihdam</p></div><span className="ps-sp-top">5</span></li>
                             </ol>
                         </div>
                     </section>
@@ -179,7 +179,7 @@ const IstanbulKodluyor = (props: Props) => {
                             </span>
                         </div>
 
-                        <div className='col-md-9 col-4 mt-8 reg-sec'>
+                        <div className='col-md-9 col-4 mt-8 reg-sec p-5'>
                             <div>
                                 <span className="number">1</span><span className="text">Ücretsiz eğitim al</span>
                             </div>
@@ -202,7 +202,7 @@ const IstanbulKodluyor = (props: Props) => {
 
             <Row className='bg-grey pt-0'>
                 <div className='col-12 text-center p-10 '>
-                    <div className=" partners mt-10 ">
+                    <div className=" partners mt-10 partners-column ">
                         <div>
                             <span className='partners-firstrow'>
                                 <img className='tcsan-bak' alt="Sanayi ve Teknoloji Bakanlığır Logo" src="../../../public/assets/images/stb.png" />
@@ -225,7 +225,7 @@ const IstanbulKodluyor = (props: Props) => {
                     </div>
                     <div className='partners mt-20'>
                         <span><span>
-                            <img className='enocta' alt="" src="../../../public/assets/images/enocta logo.svg" />
+                            <img className='enocta enocta-mb' alt="" src="../../../public/assets/images/enocta logo.svg" />
                         </span>
                             <img className='enocta' alt="" src="../../../public/assets/images/tobeto-logo.png" />
                         </span>

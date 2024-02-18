@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
-import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
+
+
 export default class MyProfileNavbar extends Component {
   state = { activeItem: 'closest' }
 
@@ -13,8 +14,10 @@ export default class MyProfileNavbar extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Menu text vertical>
+      <Menu text vertical > 
+     
         <Menu.Item
+         
           name='Kişisel  Bilgilerim'
           active={activeItem === 'Kişisel  Bilgilerim'}
           onClick={this.handleItemClick}
@@ -46,7 +49,6 @@ export default class MyProfileNavbar extends Component {
         />
          <Menu.Item
           name='Yabancı Dillerim' 
-          icon={logoImage}
           active={activeItem === 'Yabancı Dillerim'}
           onClick={this.handleItemClick}
         />

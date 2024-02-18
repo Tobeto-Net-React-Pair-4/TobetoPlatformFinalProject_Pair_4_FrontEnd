@@ -1,38 +1,33 @@
 
 import { Dropdown } from 'semantic-ui-react'
-
 const languageOptions = [
-  { key: 'null', value: 'null', flag: 'null', text: 'Select Lanuguage' },
-  { key: 'af', value: 'af', flag: 'af', text: 'Afghanistan' },
-  { key: 'ax', value: 'ax', flag: 'ax', text: 'Aland Islands' },
-  { key: 'al', value: 'al', flag: 'al', text: 'Albania' },
-  { key: 'dz', value: 'dz', flag: 'dz', text: 'Algeria' },
-  { key: 'as', value: 'as', flag: 'as', text: 'American Samoa' },
-  { key: 'ad', value: 'ad', flag: 'ad', text: 'Andorra' },
-  { key: 'ao', value: 'ao', flag: 'ao', text: 'Angola' },
-  { key: 'ai', value: 'ai', flag: 'ai', text: 'Anguilla' },
-  { key: 'ag', value: 'ag', flag: 'ag', text: 'Antigua' },
-  { key: 'ar', value: 'ar', flag: 'ar', text: 'Argentina' },
-  { key: 'am', value: 'am', flag: 'am', text: 'Armenia' },
-  { key: 'aw', value: 'aw', flag: 'aw', text: 'Aruba' },
-  { key: 'au', value: 'au', flag: 'au', text: 'Australia' },
-  { key: 'at', value: 'at', flag: 'at', text: 'Austria' },
-  { key: 'az', value: 'az', flag: 'az', text: 'Azerbaijan' },
-  { key: 'bs', value: 'bs', flag: 'bs', text: 'Bahamas' },
-  { key: 'bh', value: 'bh', flag: 'bh', text: 'Bahrain' },
-  { key: 'bd', value: 'bd', flag: 'bd', text: 'Bangladesh' },
-  { key: 'bb', value: 'bb', flag: 'bb', text: 'Barbados' },
-  { key: 'by', value: 'by', flag: 'by', text: 'Belarus' },
-  { key: 'be', value: 'be', flag: 'be', text: 'Belgium' },
-  { key: 'bz', value: 'bz', flag: 'bz', text: 'Belize' },
-  { key: 'bj', value: 'bj', flag: 'bj', text: 'Benin' },
-  { key: 'in', value: 'in', flag: 'in', text: 'İngilizce' },
+  { key: 'null', value: '',  text: 'Dil Seçin' },
+  { key: 'de', value: 'de', flag: 'de', text: 'Almanca' },
+  { key: 'cz', value: 'cz', flag: 'cz', text: 'Çekçe' },
+  { key: 'ws', value: 'ws', flag: 'ws', text: 'American Samoa' },
+  { key: 'fi', value: 'fi', flag: 'fi', text: 'Fince' },
+  { key: 'fr', value: 'fr', flag: 'fr', text: 'Fransızca' },
   { key: 'tr', value: 'tr', flag: 'tr', text: 'Türkçe' },
+  { key: 'an', value: 'an', flag: 'an', text: 'Hollandaca' },
+  { key: 'gb', value: 'gb', flag: 'gb', text: 'İngilizce' },
+  { key: 'es', value: 'es', flag: 'es', text: 'İspanyolca' },
+  { key: 'se', value: 'se', flag: 'se', text: 'İsveççe' },
+  { key: 'it', value: 'it', flag: 'it', text: 'İtalyanca' },
+  { key: 'jp', value: 'jp', flag: 'jp', text: 'Japonca' },
+  { key: 'kr', value: 'kr', flag: 'kr', text: 'Korece' },
+  { key: 'bd', value: 'bd', flag: 'bd', text: 'Lehçe' },
+  { key: 'hu', value: 'hu', flag: 'hu', text: 'Macarca' },
+  { key: 'no', value: 'no', flag: 'no', text: 'Norveççe' },
+  { key: 'pt', value: 'pt', flag: 'pt', text: 'Portekizce' },
+  { key: 'ro', value: 'ro', flag: 'ro', text: 'Romence' },
+  { key: 'ru', value: 'ru', flag: 'ru', text: 'Rusça' },
+  { key: 'vi', value: 'vi', flag: 'vi', text: 'Vietnamca' },
+  { key: 'gr', value: 'gr', flag: 'gr', text: 'Yunanca' },
 ]
 
 const DropdownLanguage = () => (
   <Dropdown
-    placeholder='Select Lanuguage'
+    placeholder='Dil Seçin'
     fluid
     search
     selection

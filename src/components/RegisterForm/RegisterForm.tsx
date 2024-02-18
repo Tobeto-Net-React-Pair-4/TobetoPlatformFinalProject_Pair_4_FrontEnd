@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Button, Col} from "react-bootstrap";
-import "./RegisterForm.css";
+// import "./RegisterForm.css";
 import toastr from "toastr";
 import authService from "../../services/authService";
 import { RegisterCredentials } from "../../models/requests/auth/registerCredentials";

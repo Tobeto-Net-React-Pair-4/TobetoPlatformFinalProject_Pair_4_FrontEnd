@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
 import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
 import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
+import "./Register.css"
 
 const Register: React.FC = () => {
   return (

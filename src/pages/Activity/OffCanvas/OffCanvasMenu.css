@@ -3,6 +3,9 @@
 	min-height: 100% !important;
 	min-width: 55% !important;
 }
+.offcanvas-body{
+	padding: 0;
+}
 
 .off-canvas-content {
 	position: fixed;
@@ -72,8 +75,8 @@
 
 .video-detail-button {
 	display: flex;
-	padding-top: 1px;
-	padding-right: 15px;
+	padding-top: 3px;
+	padding-right: 11px;
 	text-align: center;
 	color: #fff;
 	background-color: #549be6;
@@ -83,7 +86,7 @@
 }
 
 .education-detail-row {
-	margin-left: 4px;
+	margin-left: -20px;
 	width: 250px;
 	display: flex;
 	height: 30px;

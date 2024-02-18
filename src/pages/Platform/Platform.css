@@ -33,14 +33,14 @@ h6 {
 	color: var(--bs-heading-color);
 }
 .row-custom-welcome {
-	padding: 10rem 0;
+	padding: 7rem 0;
 }
 
 .header-custom-welcome {
 	color: #9933ff;
 	font-weight: bolder;
 	margin-bottom: 1em;
-	margin-top: 130px;
+
 	font-size: 2.25rem;
 	letter-spacing: 2px;
 }
@@ -51,7 +51,7 @@ h6 {
 }
 .text-custom-welcome {
 	color: #393838;
-	margin-bottom: 4rem;
+	margin-bottom: 0rem;
 	letter-spacing: 1.5px;
 	font-size: 24px;
 	margin-top: 2em;
@@ -109,7 +109,7 @@ h6 {
 }
 
 .tbt-platform-main-shadow {
-	padding-top: 50px;
+	padding-top: 1px;
 	box-shadow: 0px 0px 15px 1px rgba(56, 56, 56, 0.1);
 	border-radius: 15px;
 }
@@ -405,7 +405,6 @@ h6 {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center ;
-	max-width: 100% !important;
 }
 
 .edu-card-link {

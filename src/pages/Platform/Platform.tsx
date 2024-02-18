@@ -111,7 +111,7 @@ const LoginPlatform: React.FC = () => {
 										{activeTab === "basvurularim" && (
 											<div className="tab-basvurularim">
 												<Row>
-													<Col xs={12} md={5} className="tbt-basvuru-card">
+													<Col xs={12} className="tbt-basvuru-card">
 														<Row>
 															<Col xs={12} md={5}>
 																İstanbul Kodluyor<br></br>Bilgilendirme<br></br>

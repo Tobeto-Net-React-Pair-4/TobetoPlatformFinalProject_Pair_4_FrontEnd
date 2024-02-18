@@ -13,6 +13,9 @@ import Register from "../../pages/Register/Register";
 import TrainingSection from "../TrainingSection/TrainingSection";
 import AnnouncementSection from "../AnnouncementSection/AnnouncementSection";
 import ForeignLanguage from "../../pages/ForeignLanguage/ForeignLanguage";
+import "../../fonts/fonts.css";
+import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
+import Activity from "../../pages/Activity/Activity";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	return (
@@ -90,6 +93,23 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					</>
 				}
 			/>
+			<Route
+				path="/istanbul-kodluyor"
+				element={
+					<>
+						<IstanbulKodluyor />
+					</>
+				}
+			/>
+			<Route
+				path="/activity"
+				element={
+					<>
+						<Activity />
+					</>
+				}
+			/>
+
 			<Route path="/about" element={<About />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>

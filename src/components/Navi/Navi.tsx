@@ -115,7 +115,9 @@ const Navi: React.FC = () => {
 													src={ppImage}
 													alt=""
 												/>
-												<p className="mb-0 name me-3">Alper Çırak</p>
+												<p className="mb-0 name me-3">
+													{user.firstName + " " + user.lastName}
+												</p>
 											</Button>
 
 											<Dropdown.Toggle

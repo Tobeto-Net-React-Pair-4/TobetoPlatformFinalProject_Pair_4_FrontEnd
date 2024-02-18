@@ -1,8 +1,9 @@
 import { Header, Grid, Container } from 'semantic-ui-react'
 import DropdownLanguage from '../../components/Dropdown/DropdownLanguage';
 import DropdownLevel from '../../components/Dropdown/DropdownLevel';
-import MyProfileNavbar from '../../components/MyProfileNavbar/MyProfileNavbar';
+
 import { Button } from 'react-bootstrap';
+import MyProfileNavbar from '../../components/MyProfileNavbar/MyProfileNavbar';
 
 const style = {
     h3: {
@@ -10,15 +11,12 @@ const style = {
         padding: '2em 0em',
     },
     h1Styles: {
-        
+
         padding: '1.5em 1.5em',
 
     },
 
 }
-
-
-
 const ForeignLanguage = () => {
 
     return (
@@ -31,8 +29,7 @@ const ForeignLanguage = () => {
                     <Grid.Column width={4} >
                         <MyProfileNavbar />
                     </Grid.Column>
-                    <Grid.Column>
-
+                    <Grid.Column width={12} > 
                         <Grid container columns={2} relaxed stackable>
                             <Grid.Column  >
 

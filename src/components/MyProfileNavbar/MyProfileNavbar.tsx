@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
-
-export default class MenuExampleVerticalText extends Component {
+import logoImage from "../Image/tobeto-logo.29b55e1c.svg";
+export default class MyProfileNavbar extends Component {
   state = { activeItem: 'closest' }
 
   handleItemClick = (e:any, data:any) => {
@@ -14,20 +14,45 @@ export default class MenuExampleVerticalText extends Component {
     const { activeItem } = this.state;
     return (
       <Menu text vertical>
-        <Menu.Item header>profil nav bar</Menu.Item>
         <Menu.Item
-          name='closest'
-          active={activeItem === 'closest'}
+          name='Kişisel  Bilgilerim'
+          active={activeItem === 'Kişisel  Bilgilerim'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='mostComments'
-          active={activeItem === 'mostComments'}
+          name='Deneyimlerim'
+          active={activeItem === 'Deneyimlerim'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name='mostPopular'
-          active={activeItem === 'mostPopular'}
+          name='Eğitim Hayatım'
+          active={activeItem === 'Eğitim Hayatım'}
+          onClick={this.handleItemClick}
+        />
+         <Menu.Item
+          name='Yetkinliklerim'
+          active={activeItem === 'Yetkinliklerim'}
+          onClick={this.handleItemClick}
+        />
+         <Menu.Item
+          name='Sertifikalarım'
+          active={activeItem === 'Sertifikalarım'}
+          onClick={this.handleItemClick}
+        />
+         <Menu.Item
+          name='Medya Hesaplarım'
+          active={activeItem === 'Medya Hesaplarım'}
+          onClick={this.handleItemClick}
+        />
+         <Menu.Item
+          name='Yabancı Dillerim' 
+          icon={logoImage}
+          active={activeItem === 'Yabancı Dillerim'}
+          onClick={this.handleItemClick}
+        />
+         <Menu.Item
+          name='Ayarlar'
+          active={activeItem === 'Ayarlar'}
           onClick={this.handleItemClick}
         />
       </Menu>

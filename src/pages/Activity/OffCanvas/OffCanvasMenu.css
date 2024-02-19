@@ -1,0 +1,145 @@
+
+.off-canvas-menu {
+	min-height: 100% !important;
+	min-width: 55% !important;
+}
+.offcanvas-body{
+	padding: 0;
+}
+
+.off-canvas-content {
+	position: fixed;
+	top: 0;
+	right: -60vw;
+	width: 51vw;
+	height: 100vh;
+	background: #fff;
+	transition: right 0.3s;
+	overflow-x: auto;
+}
+
+.off-canvas-content.open {
+	right: 0;
+}
+
+.close-button-container {
+	text-align: left;
+	height: 30px;
+	margin-left: -1px;
+	z-index: 1200;
+}
+
+
+.close-button-icon {
+	top: 10px;
+	cursor: pointer;
+	background-color: blueviolet;
+	width: 30px;
+	height: 30px;
+	color: white;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	font-size: 24px;
+	margin-bottom: 112px;
+	justify-content: center;
+	align-items: center;
+	z-index: 1050;
+}
+
+.off-canvas-content {
+	box-shadow: -5px 0 100px rgba(0, 0, 0, 0.5);
+	z-index: 980;
+}
+
+.off-canvas-content.open {
+	transform: translateX(0);
+}
+
+.education-image {
+	min-width: 50px;
+	width: 100px;
+	height: 100px;
+	margin: 27px 0 0 0px;
+	border-radius: 15px;
+	transition: all 0.5s ease;
+}
+
+.education-title {
+	padding-left: 5px;
+	font-size: 18px;
+	font-family: Poppins, Helvetica, Arial, sans-serif;
+	font-weight: 600;
+}
+
+
+.video-detail-button {
+	display: flex;
+	padding-top: 3px;
+	padding-right: 11px;
+	text-align: center;
+	color: #fff;
+	background-color: #549be6;
+	font-weight: lighter;
+	justify-content: center;
+	border-radius: 3px;
+}
+
+.education-detail-row {
+	margin-left: -20px;
+	width: 250px;
+	display: flex;
+	height: 30px;
+}
+
+
+.clock-icon {
+	padding-top: 7px;
+	color: #626263;
+}
+
+.time {
+	color: #626263;
+}
+
+.go-education-button {
+	background-color: blueviolet;
+	color: #fff;
+	width: 130px;
+	text-align: center;
+	padding-top: 4px;
+	padding-right: 18px;
+	height: 30px;
+	border-radius: 4px;
+	margin-left: 100px;
+}
+
+
+.ok-icon {
+	display: flex;
+	align-items: center;
+	margin-left: 0px;
+	width: 198px;
+	font-weight: lighter;
+	font-size: 14px;
+}
+
+.education-time-detail {
+	color: #3dcb79;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+.custom-education-detail {
+	text-align: left;
+	padding-left: 80px;
+}
+
+
+.custom-education-detail-container {
+	padding-left: 42px;
+	margin-top: 35px;
+	text-align: left;
+	margin-bottom: 2em;
+}

@@ -8,8 +8,134 @@ import eduImage from "../../pages/Image/23_ANF_1_2fa2e5b117.jpg";
 const EducationCards: React.FC = () => {
 	return (
 		<div className="tab-my-edu">
-			<Row>
-				<Col>
+			<Row >
+				<Col className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col  className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col  className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col className="col-md-3 col-12">
+					<Row className="edus-row">
+						<Link to="/activity" className="edu-card-link">
+							<div className="edu-card">
+								<div className="edu-card-image">
+									<img src={eduImage} alt="Eğitim Görseli"></img>
+								</div>
+								<div className="edu-card-body">
+									<h5 className="edu-card-title">
+										.NET & React Fullstack | Öğrenme Yolculuğu
+									</h5>
+									<p className="edu-card-date">21 Eylül 2023 15:20</p>
+									<button className="edu-card-button">Eğitime Git</button>
+								</div>
+							</div>
+						</Link>
+					</Row>
+				</Col>
+				<Col className="col-md-3 col-12">
 					<Row className="edus-row">
 						<Link to="/activity" className="edu-card-link">
 							<div className="edu-card">

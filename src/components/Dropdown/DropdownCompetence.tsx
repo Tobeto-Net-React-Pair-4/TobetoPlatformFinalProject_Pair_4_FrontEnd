@@ -1,0 +1,24 @@
+import React from 'react'
+import { Dropdown } from 'semantic-ui-react'
+
+const options = [
+    { key: 0, text: 'Seviye Seçin', value: "" },
+    { key: 1, text: 'Temel Seviye ( A1 , A2)', value: "Temel Seviye ( A1 , A2)" },
+    { key: 2, text: 'Orta Seviye (B1 , B2)', value: "Orta Seviye (B1 , B2)" },
+    { key: 3, text: 'İleri Seviye (C1 , C2)', value: "İleri Seviye (C1 , C2)" },
+    { key: 4, text: 'Anadil', value: "Anadil" },
+]
+const DropdownCompetence = () => {
+    return (
+        <>
+            < Dropdown
+                placeholder='Seviye Seçin'
+                fluid
+                search
+                selection
+                options={options} />
+        </>
+    )
+}
+
+export default DropdownCompetence

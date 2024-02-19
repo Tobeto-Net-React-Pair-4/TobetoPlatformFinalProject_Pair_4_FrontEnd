@@ -13,11 +13,11 @@
 	color: white !important;
 }
 .navbi-custom {
-  width: 100%;
-  z-index: 2;
-  padding-left: 0 !important;
-  position: fixed;
-  margin-top: 75px;
+	width: 100%;
+	z-index: 2;
+	padding-left: 0 !important;
+	position: fixed;
+	margin-top: 75px;
 }
 
 .custom-dropdown .dropdown-menu {

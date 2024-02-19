@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "../../pages/NotFound/NotFound";
 import About from "../../pages/About/About";
@@ -12,9 +12,20 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import TrainingSection from "../TrainingSection/TrainingSection";
 import AnnouncementSection from "../AnnouncementSection/AnnouncementSection";
-import ForeignLanguage from "../../pages/ForeignLanguage/ForeignLanguage";
+import ForeignLanguage from "../../pages/ProfilePages/ForeignLanguage/ForeignLanguage";
+import "../../fonts/fonts.css";
+import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
+import Activity from "../../pages/Activity/Activity";
+import ProfileEdit from "../../pages/ProfileEdit/ProfileEdit";
+import PersonalInfo from "../../pages/ProfilePages/PersonalInfo/PersonalInfo";
+import Experience from "../../pages/ProfilePages/Experience/Experience";
+import EducationLife from "../../pages/ProfilePages/EducationLife/EducationLife";
+import Competence from "../../pages/ProfilePages/Competence/Competence";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
+	interface LayoutProps {
+		children: ReactNode;
+	}
 	return (
 		<Routes>
 			<Route
@@ -90,6 +101,60 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					</>
 				}
 			/>
+			<Route
+				path="/istanbul-kodluyor"
+				element={
+					<>
+						<IstanbulKodluyor />
+					</>
+				}
+			/>
+			<Route
+				path="/activity"
+				element={
+					<>
+						<Activity />
+					</>
+				}
+			/>
+
+			<Route
+				path="/personalinfo"
+				element={
+					<>
+						<Navi />
+						<PersonalInfo />
+					</>
+				}
+			/>
+			<Route
+				path="/experience"
+				element={
+					<>
+						<Navi />
+						<Experience />
+					</>
+				}
+			/>
+			<Route
+				path="/educationlife"
+				element={
+					<>
+						<Navi />
+						<EducationLife />
+					</>
+				}
+			/>
+			<Route
+				path="/competence"
+				element={
+					<>
+						<Navi />
+						<Competence />
+					</>
+				}
+			/>
+
 			<Route path="/about" element={<About />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>

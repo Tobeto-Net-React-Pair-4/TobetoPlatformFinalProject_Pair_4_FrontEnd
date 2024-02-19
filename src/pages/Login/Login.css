@@ -267,7 +267,7 @@ button:not(:disabled) {
 	color: var(--bs-secondary-color) !important;
 }
 
-.login-center{
+.login-center {
 	height: 50%;
 	margin-top: 200px;
 }
@@ -332,7 +332,7 @@ button:not(:disabled) {
 	gap: 1em;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	padding: 1em;
-	padding-top: 2em ;
+	padding-top: 2em;
 }
 
 .equal-col > [class*="col-"] {
@@ -340,10 +340,10 @@ button:not(:disabled) {
 	flex-direction: column;
 	width: 100%;
 }
-@media (min-width:1200px){
+@media (min-width: 1200px) {
 	.equal-col {
-	margin: 0 auto;
-	width: 1300px;
+		margin: 0 auto;
+		width: 1300px;
 	}
 }
 
@@ -448,7 +448,7 @@ button:not(:disabled) {
 .btn-rainbow {
 	position: sticky;
 	background: #181717;
-	color: #fff;
+	color: #fff !important;
 }
 
 @keyframes slide {
@@ -469,7 +469,7 @@ button:not(:disabled) {
 	content: " ";
 	display: block;
 	border-bottom: 2.5px solid #00b078 !important;
-	margin: 2em 0 4em;
+	margin: 2em 9em 4em 9em;
 	width: 200px;
 }
 

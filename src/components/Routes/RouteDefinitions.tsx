@@ -18,6 +18,9 @@ import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
 import Activity from "../../pages/Activity/Activity";
 import ProfileEdit from "../../pages/ProfileEdit/ProfileEdit";
 import PersonalInfo from "../../pages/ProfilePages/PersonalInfo/PersonalInfo";
+import Experience from "../../pages/ProfilePages/Experience/Experience";
+import EducationLife from "../../pages/ProfilePages/EducationLife/EducationLife";
+import Competence from "../../pages/ProfilePages/Competence/Competence";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	interface LayoutProps {
@@ -124,7 +127,33 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					</>
 				}
 			/>
-
+			<Route
+				path="/experience"
+				element={
+					<>
+						<Navi />
+						<Experience />
+					</>
+				}
+			/>
+			<Route
+				path="/educationlife"
+				element={
+					<>
+						<Navi />
+						<EducationLife />
+					</>
+				}
+			/>
+			<Route
+				path="/competence"
+				element={
+					<>
+						<Navi />
+						<Competence />
+					</>
+				}
+			/>
 
 			<Route path="/about" element={<About />} />
 			<Route path="*" element={<NotFound />} />

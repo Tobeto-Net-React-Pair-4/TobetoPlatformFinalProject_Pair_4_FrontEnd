@@ -25,10 +25,8 @@ const ForeignLanguage = () => {
             <ProfileEdit>
                 <Grid container columns={2} relaxed stackable>
                     <Grid.Column  >
-
                         <DropdownLanguage />
                     </Grid.Column>
-
                     <Grid.Column >
                         <DropdownLevel />
                     </Grid.Column>

@@ -12,10 +12,17 @@
 }
 
 .equal-col2 {
-    /* display: grid; */
     grid-gap: 1em;
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 1em;
     padding-top: 2em;
+}
+
+@media only screen and (min-width: 75em){
+.col-lg-5 {
+    -ms-flex-preferred-size: 41.66666667%;
+    flex-basis: 41.66666667%;
+    max-width: 100% !important;
+}
 }

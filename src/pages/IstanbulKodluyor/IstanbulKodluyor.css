@@ -6,28 +6,6 @@
     align-items: center;
 }
 
-/* Küçük ekranlar için stil /
-@media screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-/ Orta büyüklükte ekranlar için stil /
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  body {
-    background-color: lightgreen;
-  }
-}
-
-/ Büyük ekranlar için stil */
-
-/* @media screen and (min-width: 1025px) {
-    body {
-      background-color: lightyellow;
-    }
-  } */
-
 .ik-logo {
     display: block;
     max-width: 100%;
@@ -964,8 +942,6 @@ h2.accordion-button.accordion-header::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100%; */
-    /* height: 100%; */
 }
 
 .card__thumbnail img {

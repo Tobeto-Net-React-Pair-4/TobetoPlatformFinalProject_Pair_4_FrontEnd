@@ -19,6 +19,11 @@
 	position: fixed;
 	margin-top: 75px;
 }
+@media screen and (max-width: 768px) {
+    .navbi-custom {
+        margin-top: 104px;
+    }
+}
 
 .custom-dropdown .dropdown-menu {
 	background-color: #9933ff;

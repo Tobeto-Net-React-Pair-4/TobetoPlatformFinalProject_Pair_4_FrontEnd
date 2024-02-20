@@ -8,16 +8,18 @@ const Banner: React.FC = () => {
 		<div className="banner-background">
 			<Container>
 				<Row className="align-items-center justify-content-between">
-					<Col lg={1} sm={12}>
+					<Col lg={1} sm={3}>
 						<Image
 							src={logoIst}
-							className=" me-2"
+							className=" me-2 banner-custom-ml"
 							style={{ width: "165px", height: "35px" }}
 						/>
 					</Col>
-					<Col xs>
+					<Col>
 						<div className="banner-text text-center">
-							Aradığın <span>"</span>iş<span>"</span> Burada!
+							<span className="block-line banner-text">Aradığın</span>
+							<span className="block-line banner-text"><span>"</span>iş<span>"</span></span>
+							<span className="block-line banner-text">Burada!</span>
 						</div>
 					</Col>
 					<Col xs="auto">

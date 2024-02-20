@@ -88,7 +88,9 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 				element={
 					<>
 						<Navi />
+		  				<PrivateRoute>
 						<TrainingSection />
+						</PrivateRoute>
 					</>
 				}
 			/>

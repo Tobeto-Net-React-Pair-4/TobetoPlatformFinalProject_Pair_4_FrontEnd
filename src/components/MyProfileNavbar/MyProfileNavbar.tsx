@@ -23,13 +23,13 @@ export default class MyProfileNavbar extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
-        href="/deneyimlerim"  
+        href="/profilim/profilimi-duzenle/deneyimlerim"  
           name='Deneyimlerim'
           active={activeItem === 'Deneyimlerim'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-        href="/eğitim-hayatım"  
+        href="/profilim/profilimi-duzenle/eğitim-hayatım"  
           name='Eğitim Hayatım'
           active={activeItem === 'Eğitim Hayatım'}
           onClick={this.handleItemClick}

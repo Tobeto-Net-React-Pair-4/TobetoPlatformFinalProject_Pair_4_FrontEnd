@@ -17,7 +17,7 @@ export default class MyProfileNavbar extends Component {
       <Menu text vertical > 
      
         <Menu.Item
-          href="/personalinfo"  
+          href="/profil-bilgilerim"  
           name='Kişisel  Bilgilerim'
           active={activeItem === 'Kişisel  Bilgilerim'}
           onClick={this.handleItemClick}
@@ -28,6 +28,7 @@ export default class MyProfileNavbar extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
+        href="/educationlife"  
           name='Eğitim Hayatım'
           active={activeItem === 'Eğitim Hayatım'}
           onClick={this.handleItemClick}

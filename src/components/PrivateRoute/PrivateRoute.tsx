@@ -10,13 +10,14 @@ type Props = {
 const PrivateRoute = (props: Props) => {
     const navigate = useNavigate();
     const [isSafe, setIsSafe] = useState(false);
-    useEffect(() => {
+    useEffect(() => { 
       if (tokenService.hasToken()) {
         setIsSafe(true);
       }
       else {
         toastr.warning("Önce giriş yapmalısınız.")
         navigate('/giris')
+        
       }
     })
   return (

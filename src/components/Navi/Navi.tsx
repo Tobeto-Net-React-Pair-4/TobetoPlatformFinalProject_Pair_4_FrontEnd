@@ -9,7 +9,7 @@ import {
 	Image,
 } from "react-bootstrap";
 import "./Navi.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
 import { logout } from "../../store/auth/authSlice";
@@ -61,11 +61,12 @@ const Navi: React.FC = () => {
 							style={{ width: "165px", height: "35px" }}
 							className="m-3"
 						/>
+						
 						{isMobile && (
 							<Navbar.Toggle
 								className="btn p-0 d-lg-none navbar-burger"
 								onClick={handleShow}
-								aria-controls="responsive-navbar-nav"
+								aria-controls="responsive-navbar-nav"							
 							/>
 						)}
 						<Navbar.Collapse id="responsive-navbar-nav">
@@ -76,11 +77,12 @@ const Navi: React.FC = () => {
 										alt=""
 										style={{ width: "165px", height: "35px" }}
 										className="m-3"
+									
 									/>
 								</Offcanvas.Header>
 								<Offcanvas.Body>
 									<Nav className="justify-content-end flex-grow-1 pe-3">
-										<Nav.Link href="#" className="nav-link-custom nav-active">
+										<Nav.Link href="/platform" className="nav-link-custom nav-active">
 											Ana Sayfa
 										</Nav.Link>
 										<Nav.Link href="#" className="nav-link-custom c-gray-3">
@@ -95,7 +97,7 @@ const Navi: React.FC = () => {
 										<Nav.Link href="#" className="nav-link-custom c-gray-3">
 											Takvim
 										</Nav.Link>
-										<Nav.Link href="#" className="nav-link-custom c-gray-3">
+										<Nav.Link href="/istanbul-kodluyor" className="nav-link-custom c-gray-3">
 											İstanbul Kodluyor
 										</Nav.Link>
 									</Nav>
@@ -144,7 +146,7 @@ const Navi: React.FC = () => {
 											</Dropdown.Toggle>
 
 											<Dropdown.Menu className="profile">
-												<Dropdown.Item href="#">Profil Bilgileri</Dropdown.Item>
+												<Dropdown.Item href="/personalinfo">Profil Bilgileri</Dropdown.Item>
 												<Dropdown.Divider />
 												<Dropdown.Item href="#" onClick={handleLogout}>
 													Oturumu Kapat
@@ -158,7 +160,7 @@ const Navi: React.FC = () => {
 						{!isMobile && (
 							<Navbar.Collapse id="basic-navbar-nav">
 								<Nav className=" flex-grow-1 pe-3">
-									<Nav.Link href="#" className="nav-link-custom nav-active">
+									<Nav.Link href="/platform" className="nav-link-custom nav-active">
 										Ana Sayfa
 									</Nav.Link>
 									<Nav.Link href="#" className="nav-link-custom c-gray-3">
@@ -173,7 +175,7 @@ const Navi: React.FC = () => {
 									<Nav.Link href="#" className="nav-link-custom c-gray-3">
 										Takvim
 									</Nav.Link>
-									<Nav.Link href="#" className="nav-link-custom c-gray-3">
+									<Nav.Link href="/istanbul-kodluyor" className="nav-link-custom c-gray-3">
 										İstanbul Kodluyor
 									</Nav.Link>
 								</Nav>
@@ -182,8 +184,7 @@ const Navi: React.FC = () => {
 						<Dropdown as={ButtonGroup} className="header-avatar-dropdown">
 							<Button
 								variant="light"
-								className="p-0 fw-normal b-r-35 text-end d-flex align-items-center"
-							>
+								className="p-0 fw-normal b-r-35 text-end d-flex align-items-center">
 								<Image
 									className="rounded-circle me-2"
 									style={{
@@ -223,7 +224,7 @@ const Navi: React.FC = () => {
 							</Dropdown.Toggle>
 
 							<Dropdown.Menu className="profile">
-								<Dropdown.Item href="#">Profil Bilgileri</Dropdown.Item>
+								<Dropdown.Item href="/personalinfo">Profil Bilgileri</Dropdown.Item>
 								<Dropdown.Divider />
 								<Dropdown.Item href="#" onClick={handleLogout}>
 									Oturumu Kapat

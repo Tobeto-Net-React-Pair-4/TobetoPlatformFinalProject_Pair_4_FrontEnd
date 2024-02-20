@@ -131,9 +131,9 @@ const Login: React.FC = () => {
 						</span>
 					</div>
 					<div className="d-flex w-100 flex-column justify-content-center align-items-center">
-						<button className="btn d-md-inline-block mt-5 btn-darkblue2">
-							Başvur
-						</button>
+						
+						<Link to="/istanbul-kodluyor" className="btn d-md-inline-block mt-5 btn-darkblue2">Başvur</Link>
+					
 					</div>
 				</div>
 			</div>

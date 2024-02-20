@@ -6,6 +6,14 @@
   height: 75px;
   z-index: 3;
 }
+@media screen and (max-width: 768px) {
+    .banner-background {
+    	height: 104px;
+    }
+	.banner-custom-ml {
+		margin-left: -2.5em;
+	}
+}
 span {
 	color: rgb(0, 176, 120);
 }
@@ -27,8 +35,14 @@ span {
 }
 
 .banner-text {
-	color: #fff;
-	font-size: 1.5em;
+	color: #fff !important;
+	font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+    .block-line {
+        display: block;
+        color: #fff;
+    }
 }
 
 .custom-btn:hover {

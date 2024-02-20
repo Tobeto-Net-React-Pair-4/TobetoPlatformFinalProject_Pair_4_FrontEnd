@@ -23,7 +23,7 @@ class UserService extends BaseService<
 		this.apiUrl = "Users";
 	}
 	getByMail(email: string): Promise<AxiosResponse<GetUserResponse, any>> {
-		return axiosInstance.get<GetUserResponse>(this.apiUrl + "/GetByMail", {
+		return axiosInstance.get<GetUserResponse>(this.apiUrl + "/GetUserByMail", {
 			params: { email: email },
 		});
 	}

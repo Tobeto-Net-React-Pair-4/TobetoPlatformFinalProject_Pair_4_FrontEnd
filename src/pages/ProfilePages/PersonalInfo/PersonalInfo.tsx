@@ -14,13 +14,11 @@ const PersonalInfo = () => {
                         className="rounded-circle me-5"
                         src={ppImage}
                         style={{
-
                             marginLeft: '40%', display: "inline-block",
                             width: "250px",
                             height: "235px",
                             objectFit: "cover",
                             float: 'left',
-
                         }}
                         alt=""
                     ></Image>

@@ -67,7 +67,7 @@ const AnnouncementCards: React.FC = () => {
 			</Row>
 			<Row className="all-edu-btn">
 				<div className="p-row-container">
-					<a href="/duyurular," className="link-full-row">
+					<a href="/duyurular	" className="link-full-row">
 						<button className="load-more-btn">
 							<FontAwesomeIcon
 								icon={faChevronRight}

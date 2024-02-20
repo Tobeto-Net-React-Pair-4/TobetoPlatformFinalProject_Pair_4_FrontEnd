@@ -17,20 +17,28 @@ import "../../fonts/fonts.css";
 import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
 import Activity from "../../pages/Activity/Activity";
 import ProfileEdit from "../../pages/ProfileEdit/ProfileEdit";
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import PersonalInfo from "../../pages/ProfilePages/PersonalInfo/PersonalInfo";
 import Experience from "../../pages/ProfilePages/Experience/Experience";
 import EducationLife from "../../pages/ProfilePages/EducationLife/EducationLife";
 import Competence from "../../pages/ProfilePages/Competence/Competence";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
-	interface LayoutProps {
-		children: ReactNode;
-	}
+	interface LayoutProps {children: ReactNode;}
+	const basePath = '/personalinfo';
+	const privatePersonalInfo = (path: string) => (
+	  <Route
+		path={basePath + path}
+		element={
+		  <PrivateRoute>
+			<PersonalInfo/>
+		  </PrivateRoute>
+		}
+	  />
+	);
 	return (
 		<Routes>
-			<Route
-				path="/"
-				element={
+			<Route path="/" element={
 					<>
 						<Banner />
 						<CustomNavbar />
@@ -38,9 +46,7 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 					</>
 				}
 			/>
-			<Route
-				path="/giris"
-				element={
+			<Route path="/giris" element={
 					<>
 						<Banner />
 						<CustomNavbar />
@@ -69,8 +75,11 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 				element={
 					<>
 						<Navi />
+		  			<PrivateRoute>
 						<Platform />
+					</PrivateRoute>
 						<Footer />
+			
 					</>
 				}
 			/>
@@ -121,10 +130,16 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			<Route
 				path="/personalinfo"
 				element={
+					
 					<>
 						<Navi />
-						<PersonalInfo />
+		  				<PrivateRoute>
+								<PersonalInfo />
+						  </PrivateRoute>
+
 					</>
+				
+						
 				}
 			/>
 			<Route

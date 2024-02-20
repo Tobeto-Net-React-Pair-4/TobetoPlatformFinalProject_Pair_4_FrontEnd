@@ -53,7 +53,7 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			
 
 			{/* profilim/profilimi-duzenle/profil-bilgilerim */}
-			<Route path="profilim" element={<><Navi/> <ProfileEdit/> </> }>
+			<Route path="/" element={<><Navi/> <ProfileEdit/> </> }>
 					<Route path={"/profil-bilgilerim"} element={<><PrivateRoute><PersonalInfo /></PrivateRoute></>}/>
 					<Route path={"/deneyimlerim"} element={<><PrivateRoute><Experience /></PrivateRoute></>}/>
 					<Route path={"/eğitim-hayatım"} element={ <> <PrivateRoute><EducationLife /></PrivateRoute></>}/>
@@ -62,8 +62,11 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			{/* {<Route path="/profilim" element{<Profile/>}>
 				<Route path="/profilimi-duzenle" element{<ProfileEdit/>}>
 				</Route>
-			</Route}		 */}
+			</Route} */}
 			<Route path="*" element={<NotFound />} />
+
+			{privatePersonalInfo ('profil-bilgilerim')}
+
 		</Routes>
 	);
 };

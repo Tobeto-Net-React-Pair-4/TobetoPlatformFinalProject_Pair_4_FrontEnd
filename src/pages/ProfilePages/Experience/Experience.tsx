@@ -7,7 +7,7 @@ import DropdownCity from '../../../components/Dropdown/DropdownCity'
 const Experience = () => {
     return (
         <>
-            <ProfileEdit>
+            
                 <Grid.Row>
                 </Grid.Row>
                 <Grid.Row className='mt-6' >
@@ -78,7 +78,7 @@ const Experience = () => {
                         </Grid.Column>
                     </Grid>
                 </Grid.Row>
-            </ProfileEdit>
+            
         </>
     )
 }

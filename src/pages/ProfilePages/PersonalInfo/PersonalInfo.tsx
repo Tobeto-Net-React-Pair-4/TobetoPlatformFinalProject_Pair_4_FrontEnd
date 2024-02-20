@@ -8,7 +8,7 @@ import DropdownCity from '../../../components/Dropdown/DropdownCity';
 const PersonalInfo = () => {
     return (
         <>
-            <ProfileEdit>
+            
                 <Grid.Row  >
                     <Image
                         className="rounded-circle me-5"
@@ -126,7 +126,7 @@ const PersonalInfo = () => {
                         </Grid.Column>
                     </Grid>
                 </Grid.Row>
-            </ProfileEdit>
+            
         </>
     )
 }

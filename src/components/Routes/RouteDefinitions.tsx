@@ -25,6 +25,7 @@ import Competence from "../../pages/ProfilePages/Competence/Competence";
 import Profile from "../../pages/Profile/Profile";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
+	const profileBasePath="/profilim/pofilimi-duzenle";
 	interface LayoutProps {children: ReactNode;}
 	const basePath = 'profilim/profilimi-duzenle/kisisel-bilgilerim';
 	const privatePersonalInfo = (path: string) => (
@@ -52,10 +53,12 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			
 
 			{/* profilim/profilimi-duzenle/profil-bilgilerim */}
-					<Route path="/profil-bilgilerim" element={<><Navi /><PrivateRoute><PersonalInfo /></PrivateRoute></>}/>
-					<Route path="/deneyimlerim"element={<><Navi /><PrivateRoute><Experience /></PrivateRoute></>}/>
-					<Route path="/eğitim-hayatım" element={ <> <Navi /> <PrivateRoute><EducationLife /></PrivateRoute></>}/>
-					<Route path="/yetkinliklerim" element={<><Navi /><PrivateRoute><Competence /></PrivateRoute></>}/>					
+			<Route path="profilim" element={<><Navi/> <ProfileEdit/> </> }>
+					<Route path={"/profil-bilgilerim"} element={<><PrivateRoute><PersonalInfo /></PrivateRoute></>}/>
+					<Route path={"/deneyimlerim"} element={<><PrivateRoute><Experience /></PrivateRoute></>}/>
+					<Route path={"/eğitim-hayatım"} element={ <> <PrivateRoute><EducationLife /></PrivateRoute></>}/>
+					<Route path={"/yetkinliklerim"} element={<><PrivateRoute><Competence /></PrivateRoute></>}/>		
+			</Route>			
 			{/* {<Route path="/profilim" element{<Profile/>}>
 				<Route path="/profilimi-duzenle" element{<ProfileEdit/>}>
 				</Route>

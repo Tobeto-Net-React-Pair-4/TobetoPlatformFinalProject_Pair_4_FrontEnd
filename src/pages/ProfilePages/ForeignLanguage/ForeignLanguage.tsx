@@ -22,7 +22,7 @@ const ForeignLanguage = () => {
 
     return (
         <>
-            <ProfileEdit>
+            
                 <Grid container columns={2} relaxed stackable>
                     <Grid.Column  >
                         <DropdownLanguage />
@@ -36,7 +36,7 @@ const ForeignLanguage = () => {
                         Kaydet
                     </Button>
                 </div>
-            </ProfileEdit>
+
         </>
     );
 }

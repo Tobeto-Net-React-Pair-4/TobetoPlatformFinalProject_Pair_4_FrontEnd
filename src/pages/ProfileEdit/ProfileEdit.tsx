@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Container, Grid } from 'semantic-ui-react'
 import MyProfileNavbar from '../../components/MyProfileNavbar/MyProfileNavbar'
+import { Outlet } from 'react-router-dom'
 
 const style = {
     h3: {
@@ -12,10 +13,8 @@ const style = {
     },
 
 }
-interface LayoutProps {
-    children: ReactNode;
-}
-const ProfileEdit: React.FC<LayoutProps> = ({ children }) => {
+
+const ProfileEdit: React.FC = () => {
     return (
         <div>
             <Container as='h3' style={style.h3}  >
@@ -24,7 +23,7 @@ const ProfileEdit: React.FC<LayoutProps> = ({ children }) => {
                         <MyProfileNavbar />
                     </Grid.Column>
                     <Grid.Column width={12} >
-                        {children}
+                        <Outlet/>
                     </Grid.Column>
                 </Grid>
             </Container>

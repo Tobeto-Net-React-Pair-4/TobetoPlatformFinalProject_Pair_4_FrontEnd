@@ -9,7 +9,7 @@ type Props = {}
 const EducationLife = () => {
     return (
         <>
-            <ProfileEdit>
+            
                 <Grid.Row  >
                 </Grid.Row>
                 <Grid.Row className='mt-6' >
@@ -65,8 +65,8 @@ const EducationLife = () => {
                         </Grid.Column>
                     </Grid>
                 </Grid.Row>
-            </ProfileEdit>
-        </>
+            </>
+        
     )
 }
 

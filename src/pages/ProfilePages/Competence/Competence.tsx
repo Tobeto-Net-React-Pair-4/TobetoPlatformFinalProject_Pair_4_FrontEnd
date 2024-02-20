@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 const Competence = () => {
     return (
         <>
-            <ProfileEdit>
+            
                 <Grid container columns={1} relaxed stackable>
                     <Grid.Column  >
                         <Grid.Row  >
@@ -22,8 +22,8 @@ const Competence = () => {
                             </Button>
                     </Grid.Column>
                 </Grid>
-            </ProfileEdit>
-        </>
+            </>
+
     )
 }
 

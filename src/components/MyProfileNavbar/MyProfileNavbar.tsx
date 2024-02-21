@@ -17,45 +17,49 @@ export default class MyProfileNavbar extends Component {
       <Menu text vertical > 
      
         <Menu.Item
-          href="/profil-bilgilerim"  
+          href="/profilim/profilimi-duzenle/profil-bilgilerim"  
           name='Kişisel  Bilgilerim'
           active={activeItem === 'Kişisel  Bilgilerim'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-        href="/deneyimlerim"  
+        href="/profilim/profilimi-duzenle/deneyimlerim"  
           name='Deneyimlerim'
           active={activeItem === 'Deneyimlerim'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-        href="/eğitim-hayatım"  
+        href="/profilim/profilimi-duzenle/eğitim-hayatım"  
           name='Eğitim Hayatım'
           active={activeItem === 'Eğitim Hayatım'}
           onClick={this.handleItemClick}
         />
          <Menu.Item
-        href="/yetkinliklerim"
+        href="/profilim/profilimi-duzenle/yetkinliklerim"
           name='Yetkinliklerim'
           active={activeItem === 'Yetkinliklerim'}
           onClick={this.handleItemClick}
         />
          <Menu.Item
+          href="/profilim/profilimi-duzenle/sertifikalar"
           name='Sertifikalarım'
           active={activeItem === 'Sertifikalarım'}
           onClick={this.handleItemClick}
         />
          <Menu.Item
+          href="/profilim/profilimi-duzenle/sosyal-medya"
           name='Medya Hesaplarım'
           active={activeItem === 'Medya Hesaplarım'}
           onClick={this.handleItemClick}      
         />
          <Menu.Item
+          href="/profilim/profilimi-duzenle/dillerim"
           name='Yabancı Dillerim' 
           active={activeItem === 'Yabancı Dillerim'}
           onClick={this.handleItemClick}
         />
          <Menu.Item
+          href="/profilim/profilimi-duzenle/ayarlar"
           name='Ayarlar'
           active={activeItem === 'Ayarlar'}
           onClick={this.handleItemClick}

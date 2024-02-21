@@ -4,11 +4,14 @@ import { Row, Col } from "react-bootstrap"; // React-Bootstrap kullanıyorsanız
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import eduImage from "../../pages/Image/23_ANF_1_2fa2e5b117.jpg";
+import { useSelector } from "react-redux";
 
 const EducationCards: React.FC = () => {
+	const courses = useSelector((state: any) => state.platform.courses);
+	console.log(courses);
 	return (
 		<div className="tab-my-edu">
-			<Row >
+			<Row>
 				<Col className="col-md-3 col-12">
 					<Row className="edus-row">
 						<Link to="/activity" className="edu-card-link">
@@ -27,7 +30,7 @@ const EducationCards: React.FC = () => {
 						</Link>
 					</Row>
 				</Col>
-				<Col  className="col-md-3 col-12">
+				<Col className="col-md-3 col-12">
 					<Row className="edus-row">
 						<Link to="/activity" className="edu-card-link">
 							<div className="edu-card">
@@ -45,7 +48,7 @@ const EducationCards: React.FC = () => {
 						</Link>
 					</Row>
 				</Col>
-				<Col  className="col-md-3 col-12">
+				<Col className="col-md-3 col-12">
 					<Row className="edus-row">
 						<Link to="/activity" className="edu-card-link">
 							<div className="edu-card">

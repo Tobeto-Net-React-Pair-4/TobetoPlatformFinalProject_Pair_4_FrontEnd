@@ -153,7 +153,7 @@ const Navi: React.FC = () => {
 											</Dropdown.Toggle>
 
 											<Dropdown.Menu className="profile">
-												<Dropdown.Item href="/profilim/pofilimi-duzenle/profil-bilgilerim">
+												<Dropdown.Item href="/profilim/profilimi-duzenle/profil-bilgilerim">
 													Profil Bilgileri
 												</Dropdown.Item>
 												<Dropdown.Divider />
@@ -240,7 +240,7 @@ const Navi: React.FC = () => {
 							</Dropdown.Toggle>
 
 							<Dropdown.Menu className="profile">
-								<Dropdown.Item href="/profilim/pofilimi-duzenle/profil-bilgilerim">
+								<Dropdown.Item href="/profilim/profilimi-duzenle/profil-bilgilerim">
 									Profil Bilgileri
 								</Dropdown.Item>
 								<Dropdown.Divider />

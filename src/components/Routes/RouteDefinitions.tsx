@@ -69,8 +69,11 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			{/* {<Route path="/profilim" element{<Profile/>}>
 				<Route path="/profilimi-duzenle" element{<ProfileEdit/>}>
 				</Route>
-			</Route}		 */}
+			</Route} */}
 			<Route path="*" element={<NotFound />} />
+
+			{privatePersonalInfo ('profil-bilgilerim')}
+
 		</Routes>
 	);
 };

@@ -8,12 +8,12 @@ import "./Register.css"
 const Register: React.FC = () => {
   return (
     <Container fluid className="container">
-      <Row className="container pt-20 row equal-col text-center ">
+      <Row className="container pt-20 row equal-col text-center">
         <Col
           xs={6}
           md={6}
           lg={5}
-          className="btn-rainbow-card mx-auto text-center col-md-6 col-12"
+          className="btn-rainbow-card mx-auto text-center col-md-6 col-12 "
         >
           <Col className="py-4 px-sm-0 px-md-12 text-center ">
             <Col className="d-flex flex-column align-items-center">

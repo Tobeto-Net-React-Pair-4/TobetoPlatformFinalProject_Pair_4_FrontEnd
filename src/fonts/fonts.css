@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Poppins";
   src: local("Poppins"), url("./Poppins-Regular.woff2") format("woff2"),
-    url("./Poppins-Regular.woff") format("woff");
+    url("./Poppins-Regular.woff") format("woff") !important;
   font-weight: normal;
   font-style: normal;
 }

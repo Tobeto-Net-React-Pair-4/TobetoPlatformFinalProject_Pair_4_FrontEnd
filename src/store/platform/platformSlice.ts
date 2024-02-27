@@ -4,7 +4,7 @@ import { GetUserResponse } from "./../../models/responses/user/getUserResponse";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const savedUserState = localStorage.getItem("userData");
-
+const savedCoursesState = localStorage.getItem("courses");
 interface PlatformState {
 	user: GetUserResponse;
 	courses: Paginate<CourseGetListResponse>;
@@ -12,7 +12,7 @@ interface PlatformState {
 }
 const initialState: PlatformState = {
 	user: savedUserState ? JSON.parse(savedUserState) : ({} as GetUserResponse),
-	courses: {} as Paginate<CourseGetListResponse>,
+	courses: savedCoursesState ? JSON.parse(savedCoursesState) : ({} as Paginate<CourseGetListResponse>),
 	//announcements: {} as Paginate<AnnouncementGetListResponse>,
 };
 

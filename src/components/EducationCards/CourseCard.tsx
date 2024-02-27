@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import eduImage from "../../pages/Image/23_ANF_1_2fa2e5b117.jpg";
 import { CourseGetListResponse } from "../../models/responses/course/courseGetListResponse";
+import "../TrainingSection/TrainingSection.css";
 
 type Props = {
 	course: CourseGetListResponse;
@@ -19,18 +20,24 @@ const CourseCard = (props: Props) => {
 		return `${day} ${month} ${year} ${hour}:${minute}`;
 	}
 	return (
-		<div className="col-md-3 col-12">
+		<div className="col-md-3 col-12 mb-4">
 			<Link to="/activity" className="edu-card-link">
-				<div className="edu-card">
-					<div className="edu-card-image">
-						<img src={eduImage} alt="Eğitim Görseli"></img>
-					</div>
-					<div className="edu-card-body">
-						<h5 className="edu-card-title">{props.course.name}</h5>
-						<p className="edu-card-date">
-							{formatDateTime(props.course.startOfDate)}
-						</p>
-						<button className="edu-card-button">Eğitime Git</button>
+				<div className="corp-edu-card">
+					<div
+						className="card-img"
+						style={{
+							backgroundImage:
+								'url("https://tobeto.s3.cloud.ngn.com.tr/23_ENK_1_b4d858c1a9.jpg")',
+						}}
+					/>
+					<div className="card-content">
+						<div className="d-flex flex-column">
+							<span>{props.course.name}</span>
+							<span className="platform-course-date">
+								{formatDateTime(props.course.startOfDate)}
+							</span>
+						</div>
+						<a className="apply-btn">Eğitime Git</a>
 					</div>
 				</div>
 			</Link>

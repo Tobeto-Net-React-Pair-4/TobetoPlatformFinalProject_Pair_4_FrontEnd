@@ -8,9 +8,10 @@ import { CourseDeleteResponse } from "../models/responses/course/courseDeleteRes
 import { CourseUpdateResponse } from "../models/responses/course/courseUpdateResponse";
 import { AxiosResponse } from "axios";
 import axiosInstance from "../core/interceptors/axiosInceptor";
+import { Paginate } from "../core/models/PaginateResponseModel";
 
 class CourseService extends BaseService<
-	CourseGetListResponse,
+	Paginate<CourseGetListResponse>,
 	CourseGetResponse,
 	CourseAddRequest,
 	CourseAddResponse,
@@ -24,8 +25,8 @@ class CourseService extends BaseService<
 	}
 	getListByUserId(
 		userId: string
-	): Promise<AxiosResponse<CourseGetListResponse, any>> {
-		return axiosInstance.get<CourseGetListResponse>(
+	): Promise<AxiosResponse<Paginate<CourseGetListResponse>, any>> {
+		return axiosInstance.get<Paginate<CourseGetListResponse>>(
 			this.apiUrl + "/GetListByUserId",
 			{
 				params: { userId: userId },

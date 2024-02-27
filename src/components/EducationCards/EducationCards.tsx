@@ -1,162 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Row, Col } from "react-bootstrap"; // React-Bootstrap kullanıyorsanız
+import { Row } from "react-bootstrap"; // React-Bootstrap kullanıyorsanız
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import eduImage from "../../pages/Image/23_ANF_1_2fa2e5b117.jpg";
 import { useSelector } from "react-redux";
+import CourseCard from "./CourseCard";
+import { CourseGetListResponse } from "../../models/responses/course/courseGetListResponse";
 
 const EducationCards: React.FC = () => {
-	const courses = useSelector((state: any) => state.platform.courses);
-	console.log(courses);
+	const courses = useSelector((state: any) => state.platform.courses.items);
 	return (
 		<div className="tab-my-edu">
-			<Row>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-				<Col className="col-md-3 col-12">
-					<Row className="edus-row">
-						<Link to="/activity" className="edu-card-link">
-							<div className="edu-card">
-								<div className="edu-card-image">
-									<img src={eduImage} alt="Eğitim Görseli"></img>
-								</div>
-								<div className="edu-card-body">
-									<h5 className="edu-card-title">
-										.NET & React Fullstack | Öğrenme Yolculuğu
-									</h5>
-									<p className="edu-card-date">21 Eylül 2023 15:20</p>
-									<button className="edu-card-button">Eğitime Git</button>
-								</div>
-							</div>
-						</Link>
-					</Row>
-				</Col>
-			</Row>
+			<div className="row">
+				{courses.map((course: CourseGetListResponse) => (
+					<CourseCard key={course.id} course={course} />
+				))}
+			</div>
 			<Row className="all-edu-btn">
 				<div className="p-row-container">
 					<Link to="/egitimlerim" className="link-full-row">

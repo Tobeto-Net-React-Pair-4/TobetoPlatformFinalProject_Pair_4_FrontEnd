@@ -9,7 +9,7 @@ import {
 	Image,
 } from "react-bootstrap";
 import "./Navi.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
 import { logout } from "../../store/auth/authSlice";

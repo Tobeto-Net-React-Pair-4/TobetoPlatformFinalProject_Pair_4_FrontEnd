@@ -1,10 +1,10 @@
 export interface CourseGetListResponse {
-	items: any;
-	Id: string;
-	InstructorId: string;
-	CategoryId: string;
-	LikeId: string;
-	CategoryName: string;
-	InstructorName: string;
-	Name: string;
+	id: string;
+	instructorId: string;
+	categoryId: string;
+	likeId: string;
+	categoryName: string;
+	instructorName: string;
+	name: string;
+	startOfDate: string;
 }

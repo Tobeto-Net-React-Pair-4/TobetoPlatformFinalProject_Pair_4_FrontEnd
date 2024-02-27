@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "../../pages/NotFound/NotFound";
-import About from "../../pages/About/About";
 import Banner from "../Banner/Banner";
 import CustomNavbar from "../Nav/CustomNavbar";
 import Footer from "../Footer/Footer";
@@ -22,7 +21,6 @@ import PersonalInfo from "../../pages/ProfilePages/PersonalInfo/PersonalInfo";
 import Experience from "../../pages/ProfilePages/Experience/Experience";
 import EducationLife from "../../pages/ProfilePages/EducationLife/EducationLife";
 import Competence from "../../pages/ProfilePages/Competence/Competence";
-import Profile from "../../pages/Profile/Profile";
 import Certificat from "../../pages/ProfilePages/Certificat/Certificat";
 import Setings from "../../pages/ProfilePages/Setings/Setings";
 import SocialMedia from "../../pages/ProfilePages/SocialMedia/SocialMedia";

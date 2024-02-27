@@ -34,8 +34,7 @@ const Login: React.FC = () => {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			const userData = (await userService.getByMail(values.email)).data;
 			const coursesData = (await courseService.getListByUserId(userData.id))
-				.data.items;
-			console.log(coursesData);
+				.data;
 			dispatch(getCourses(coursesData));
 			dispatch(login());
 			dispatch(setUser(userData));

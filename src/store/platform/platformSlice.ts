@@ -8,10 +8,12 @@ const savedUserState = localStorage.getItem("userData");
 interface PlatformState {
 	user: GetUserResponse;
 	courses: Paginate<CourseGetListResponse>;
+	//announcements: Paginate<AnnouncementGetListResponse>;
 }
 const initialState: PlatformState = {
 	user: savedUserState ? JSON.parse(savedUserState) : ({} as GetUserResponse),
 	courses: {} as Paginate<CourseGetListResponse>,
+	//announcements: {} as Paginate<AnnouncementGetListResponse>,
 };
 
 const platformSlice = createSlice({

@@ -95,12 +95,17 @@ const Login: React.FC = () => {
 							</button>
 							<label>
 								<small>
+								<Link
+									to="/sifremi-unuttum"
+									className="text-decoration-none text-muted "
+								>
 									<p
 										className="text-decoration-none text-muted mt-5 d-block"
 										style={{ cursor: "pointer" }}
 									>
 										Şifremi Unuttum
 									</p>
+									</Link>
 								</small>
 							</label>
 						</Form>

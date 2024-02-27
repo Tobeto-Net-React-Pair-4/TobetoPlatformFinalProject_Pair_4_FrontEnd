@@ -35,6 +35,7 @@ const CourseCard = (props: Props) => {
 				</div>
 			</Link>
 		</div>
+		
 	);
 };
 

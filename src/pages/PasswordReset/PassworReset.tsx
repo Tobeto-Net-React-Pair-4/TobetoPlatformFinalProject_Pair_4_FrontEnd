@@ -33,7 +33,7 @@ const PasswordReset = () => {
     };
 
     return (
-        <div >
+        <div className="password-reset-main">
             <Container>
                 <Row className="justify-content-center mt-5 ">
                     

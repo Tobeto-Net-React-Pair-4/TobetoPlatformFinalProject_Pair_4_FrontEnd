@@ -12,7 +12,7 @@ const EducationCards: React.FC = () => {
 	return (
 		<div className="tab-my-edu">
 			<div className="row">
-				{courses.map((course: CourseGetListResponse) => (
+				{courses?.map((course: CourseGetListResponse) => (
 					<CourseCard key={course.id} course={course} />
 				))}
 			</div>

@@ -69,6 +69,7 @@ const Login: React.FC = () => {
 								type="email"
 								className="form-control mt-6"
 								placeholder="E-Posta"
+								autoComplete="current-password"
 							/>
 							<ErrorMessage
 								name="email"
@@ -81,6 +82,7 @@ const Login: React.FC = () => {
 								className="form-control mt-6"
 								type="password"
 								placeholder="Şifre"
+								autoComplete="current-password"
 							/>
 							<ErrorMessage
 								name="password"

@@ -15,6 +15,7 @@ import ppImage from "../Image/13315.png";
 import { logout } from "../../store/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { removeCourses, removeUser } from "../../store/platform/platformSlice";
+import toastr from "toastr";
 
 const Navi: React.FC = () => {
 	const dispatch = useDispatch();

@@ -1,13 +1,19 @@
+import { Paginate } from "../../core/models/PaginateResponseModel";
+import { CourseGetListResponse } from "../../models/responses/course/courseGetListResponse";
 import { GetUserResponse } from "./../../models/responses/user/getUserResponse";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const savedUserState = localStorage.getItem("userData");
 
 interface PlatformState {
 	user: GetUserResponse;
+	courses: Paginate<CourseGetListResponse>;
+	//announcements: Paginate<AnnouncementGetListResponse>;
 }
 const initialState: PlatformState = {
 	user: savedUserState ? JSON.parse(savedUserState) : ({} as GetUserResponse),
+	courses: {} as Paginate<CourseGetListResponse>,
+	//announcements: {} as Paginate<AnnouncementGetListResponse>,
 };
 
 const platformSlice = createSlice({
@@ -21,8 +27,16 @@ const platformSlice = createSlice({
 		removeUser(state) {
 			state.user = {} as GetUserResponse;
 		},
+		getCourses(state, action: PayloadAction<Paginate<CourseGetListResponse>>) {
+			state.courses = action.payload;
+			localStorage.setItem("courses", JSON.stringify(action.payload));
+		},
+		removeCourses(state) {
+			state.courses = {} as Paginate<CourseGetListResponse>;
+		},
 	},
 });
 
-export const { setUser, removeUser } = platformSlice.actions;
+export const { setUser, removeUser, getCourses, removeCourses } =
+	platformSlice.actions;
 export default platformSlice.reducer;

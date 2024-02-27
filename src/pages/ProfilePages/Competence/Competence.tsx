@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 
 
 
-const Competence = () => {
+const Competence: React.FC = () => {
     return (
         <>
             

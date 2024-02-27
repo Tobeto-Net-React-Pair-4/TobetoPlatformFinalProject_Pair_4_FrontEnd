@@ -13,11 +13,13 @@
 	color: white !important;
 }
 .navbi-custom {
-	width: 100%;
+	width: 100vw;
 	z-index: 2;
 	padding-left: 0 !important;
 	position: fixed;
 	margin-top: 75px;
+	padding-right: 20px;
+
 }
 @media screen and (max-width: 768px) {
     .navbi-custom {

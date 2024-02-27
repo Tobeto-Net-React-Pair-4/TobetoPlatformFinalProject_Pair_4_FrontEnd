@@ -8,11 +8,12 @@ import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 import userService from "../../services/userService";
-import { setUser } from "../../store/platform/platformSlice";
+import { getCourses, setUser } from "../../store/platform/platformSlice";
 import { useDispatch } from "react-redux";
 import authService from "../../services/authService";
 import { HttpStatusCode } from "axios";
 import toastr from "toastr";
+import courseService from "../../services/courseService";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
@@ -32,6 +33,9 @@ const Login: React.FC = () => {
 		if (response.status == HttpStatusCode.Ok) {
 			localStorage.setItem("token", JSON.stringify({ ...response.data }));
 			const userData = (await userService.getByMail(values.email)).data;
+			const coursesData = (await courseService.getListByUserId(userData.id))
+				.data;
+			dispatch(getCourses(coursesData));
 			dispatch(login());
 			dispatch(setUser(userData));
 			navigate("/platform");
@@ -65,6 +69,7 @@ const Login: React.FC = () => {
 								type="email"
 								className="form-control mt-6"
 								placeholder="E-Posta"
+								autoComplete="current-password"
 							/>
 							<ErrorMessage
 								name="email"
@@ -77,6 +82,7 @@ const Login: React.FC = () => {
 								className="form-control mt-6"
 								type="password"
 								placeholder="Şifre"
+								autoComplete="current-password"
 							/>
 							<ErrorMessage
 								name="password"
@@ -89,12 +95,17 @@ const Login: React.FC = () => {
 							</button>
 							<label>
 								<small>
+								<Link
+									to="/sifremi-unuttum"
+									className="text-decoration-none text-muted "
+								>
 									<p
 										className="text-decoration-none text-muted mt-5 d-block"
 										style={{ cursor: "pointer" }}
 									>
 										Şifremi Unuttum
 									</p>
+									</Link>
 								</small>
 							</label>
 						</Form>
@@ -131,9 +142,12 @@ const Login: React.FC = () => {
 						</span>
 					</div>
 					<div className="d-flex w-100 flex-column justify-content-center align-items-center">
-						
-						<Link to="/istanbul-kodluyor" className="btn d-md-inline-block mt-5 btn-darkblue2">Başvur</Link>
-					
+						<Link
+							to="/istanbul-kodluyor"
+							className="btn d-md-inline-block mt-5 btn-darkblue2"
+						>
+							Başvur
+						</Link>
 					</div>
 				</div>
 			</div>

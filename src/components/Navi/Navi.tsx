@@ -99,7 +99,8 @@ const Navi: React.FC = () => {
 										<Nav.Link href="#" className="nav-link-custom c-gray-3">
 											Katalog
 										</Nav.Link>
-										<Nav.Link href="#" className="nav-link-custom c-gray-3">
+										<Nav.Link href="/takvim"
+										 className="nav-link-custom c-gray-3">
 											Takvim
 										</Nav.Link>
 										<Nav.Link
@@ -185,7 +186,7 @@ const Navi: React.FC = () => {
 									<Nav.Link href="#" className="nav-link-custom c-gray-3">
 										Katalog
 									</Nav.Link>
-									<Nav.Link href="#" className="nav-link-custom c-gray-3">
+									<Nav.Link href="/takvim" className="nav-link-custom c-gray-3">
 										Takvim
 									</Nav.Link>
 									<Nav.Link

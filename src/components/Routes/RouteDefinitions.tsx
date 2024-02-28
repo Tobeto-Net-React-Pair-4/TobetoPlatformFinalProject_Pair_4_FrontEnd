@@ -25,6 +25,7 @@ import Certificat from "../../pages/ProfilePages/Certificat/Certificat";
 import Setings from "../../pages/ProfilePages/Setings/Setings";
 import SocialMedia from "../../pages/ProfilePages/SocialMedia/SocialMedia";
 import PasswordReset from "../../pages/PasswordReset/PassworReset";
+import Calendar from "../Calendar/Calendar";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	const profileBasePath = "/profilim/pofilimi-duzenle";
@@ -51,6 +52,7 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			<Route path="/sifremi-unuttum" element={<><Banner /><CustomNavbar /> <PasswordReset/><LoginFooter /></>}/>
 			<Route path="/istanbul-kodluyor" element={<><IstanbulKodluyor /></>} />
 			<Route path="/activity" element={<><PrivateRoute><Activity /></PrivateRoute></>} />
+			<Route path="/takvim" element={<><Navi /><PrivateRoute><Calendar/></PrivateRoute><Footer /></>}   />
 
 
 

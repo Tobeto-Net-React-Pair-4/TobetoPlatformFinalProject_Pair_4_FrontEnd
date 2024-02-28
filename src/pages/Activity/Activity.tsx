@@ -1,5 +1,9 @@
 import "./Activity.css";
 import Content from "../../components/Content/Content";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { FunctionComponent } from "react";
 import { useState } from "react";
 import ParentComponent from "./ParentComponent/ParentComponent";
@@ -52,8 +56,8 @@ const Activity: FunctionComponent = () => {
 													<div className="date-info-container">
 														<span>
 															<div className="date-info text-green">
-																<i className="ss-icon ss-like" />{" "}
-																<span>Devam Ediyor</span>
+															<FontAwesomeIcon icon={faThumbsUp} style={{color: "#3DCB79", margin:"2px 4px 0px 1px"}} />
+																<span style={{color: "#3DCB79"}}>Devam Ediyor</span>
 															</div>
 															<span
 																role="img"
@@ -85,7 +89,7 @@ const Activity: FunctionComponent = () => {
 												>
 													<div className="ant-space-item" style={{}}>
 														<div className="activity-score text-white background-green">
-															<span className="account-balance">0</span> PUAN
+															<span className="account-balance text-light">100</span> PUAN
 														</div>
 													</div>
 													<div className="ant-space-item" style={{}} />
@@ -307,7 +311,7 @@ const Activity: FunctionComponent = () => {
 													</div>
 												</div>
 												<span className="ant-progress-text" title="100%">
-													0%
+													100%
 												</span>
 											</div>
 										</div>
@@ -344,7 +348,7 @@ const Activity: FunctionComponent = () => {
 											>
 												<div className="tabs-nav ">
 													<span
-														className="tabs-nav-title"
+														className="tabs-nav-title text-black"
 														onClick={() => {
 															OnClickTab("content");
 														}}
@@ -371,7 +375,7 @@ const Activity: FunctionComponent = () => {
 											>
 												<div className="tabs-nav ">
 													<span
-														className="tabs-nav-title"
+														className="tabs-nav-title text-black"
 														onClick={() => {
 															OnClickTab("about");
 														}}
@@ -1132,16 +1136,16 @@ const Activity: FunctionComponent = () => {
 																<div className="row">
 																	<div className="col-lg-9 col-md-8 col-sm-9 col-xs-12">
 																		<div className="unit-detail-title">
-																			<div>LOREM</div>
+																			<div>Eğitimlere Nasıl Katılırım?</div>
 																		</div>
 																		<div className="unit-detail-col unit-detail-col-default">
-																			Video - <span>17 dk</span>
+																			Video - <span style={{color:"#8F8F8F"}}>17 dk</span>
 																		</div>
 																		<div className="unit-detail-col unit-detail-col-score text-green">
 																			100 Puan
 																		</div>
 																		<div className="unit-detail-col unit-detail-col-status last-child text-green">
-																			<i className="ss-icon ss-like" />{" "}
+																		<FontAwesomeIcon icon={faThumbsUp} style={{color: "#3DCB79", margin:"2px 4px 0px 1px"}} />
 																			Tebrikler, tamamladın!
 																		</div>
 																	</div>
@@ -1196,7 +1200,7 @@ const Activity: FunctionComponent = () => {
 															<strong>Bitiş</strong>
 														</div>
 														<div className="col-lg-10 col-md-10 col-sm-9 col-xs-7">
-															<span>29 ŞUB 2024 23:59</span>
+															<span className="text-black">29 ŞUB 2024 23:59</span>
 														</div>
 													</div>
 												</div>
@@ -1206,7 +1210,7 @@ const Activity: FunctionComponent = () => {
 														<strong>Geçirdiğin Süre</strong>
 													</div>
 													<div className="col-lg-10 col-md-10 col-sm-9 col-xs-7">
-														<span>28 sa 49 dk</span>
+														<span className="text-black">28 sa 49 dk</span>
 													</div>
 												</div>
 												<div className="info-section row">
@@ -1269,7 +1273,7 @@ const Activity: FunctionComponent = () => {
 												<div className="info-section file row">
 													<div className="col-lg-2 col-md-2 col-sm-3 col-xs-7">
 														<i className="hidden-icon sg-icon sg-file" />
-														<span>Görev</span>
+														<span className="text-black">Görev</span>
 													</div>
 													<div className="col-lg-10 col-md-10 col-sm-9 col-xs-5">
 														65
@@ -1278,7 +1282,7 @@ const Activity: FunctionComponent = () => {
 												<div className="info-section file row">
 													<div className="col-lg-2 col-md-2 col-sm-3 col-xs-7">
 														<i className="hidden-icon sg-icon sg-file" />
-														<span>Video</span>
+														<span className="text-black">Video</span>
 													</div>
 													<div className="col-lg-10 col-md-10 col-sm-9 col-xs-5">
 														225

@@ -19,7 +19,7 @@ export default class MyProfileNavbar extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Menu text vertical > 
+      <Menu text vertical size='large' color='purple'> 
      
         <Menu.Item
          
@@ -27,49 +27,49 @@ export default class MyProfileNavbar extends Component {
           name='Kişisel  Bilgilerim'
           active={activeItem === 'Kişisel  Bilgilerim'}
           onClick={this.handleItemClick}
-        ><FiUser /> Kişisel  Bilgilerim</Menu.Item>
+        ><FiUser size={30}/> Kişisel  Bilgilerim</Menu.Item>
         <Menu.Item
         href="/profilim/profilimi-duzenle/deneyimlerim"  
           name='Deneyimlerim'
           active={activeItem === 'Deneyimlerim'}
           onClick={this.handleItemClick}
-        ><BiBriefcaseAlt /> Deneyimlerim</Menu.Item>
+        ><BiBriefcaseAlt size={30}/> Deneyimlerim</Menu.Item>
         <Menu.Item
         href="/profilim/profilimi-duzenle/eğitim-hayatım"  
           name='Eğitim Hayatım'
           active={activeItem === 'Eğitim Hayatım'}
           onClick={this.handleItemClick}
-        ><IoBookOutline /> Eğitim Hayatım</Menu.Item>
+        ><IoBookOutline size={30}/> Eğitim Hayatım</Menu.Item>
          <Menu.Item
         href="/profilim/profilimi-duzenle/yetkinliklerim"
           name='Yetkinliklerim'
           active={activeItem === 'Yetkinliklerim'}
           onClick={this.handleItemClick}
-        ><PiMedalThin /> Yetkinliklerim</Menu.Item>
+        ><PiMedalThin size={30}/> Yetkinliklerim</Menu.Item>
          <Menu.Item
           href="/profilim/profilimi-duzenle/sertifikalar"
           name='Sertifikalarım'
           active={activeItem === 'Sertifikalarım'}
           onClick={this.handleItemClick}
-        ><PiCertificateLight /> Sertifikalarım</Menu.Item>
+        ><PiCertificateLight size={30}/> Sertifikalarım</Menu.Item>
          <Menu.Item
           href="/profilim/profilimi-duzenle/sosyal-medya"
           name='Medya Hesaplarım'
           active={activeItem === 'Medya Hesaplarım'}
           onClick={this.handleItemClick}      
-        ><TbWorld /> Medya Hesaplarım</Menu.Item>
+        ><TbWorld size={30}/> Medya Hesaplarım</Menu.Item>
          <Menu.Item
           href="/profilim/profilimi-duzenle/dillerim"
           name='Yabancı Dillerim' 
           active={activeItem === 'Yabancı Dillerim'}
           onClick={this.handleItemClick}
-        ><IoLanguageOutline /> Yabancı Dillerim</Menu.Item>
+        ><IoLanguageOutline size={30}/> Yabancı Dillerim</Menu.Item>
          <Menu.Item
           href="/profilim/profilimi-duzenle/ayarlar"
           name='Ayarlar'
           active={activeItem === 'Ayarlar'}
           onClick={this.handleItemClick}
-        ><CiSettings /> Ayarlar</Menu.Item>
+        ><CiSettings size={30}/> Ayarlar</Menu.Item>
       </Menu>
     );
   }

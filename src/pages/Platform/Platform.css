@@ -621,16 +621,9 @@ h6 {
 .anc-row {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
-.anc-title {
-	color: #08ae53;
-	display: flex;
-	justify-content: space-between;
-	font-weight: 100;
-	font-size: 12px;
-}
 
 .anc-ik {
 	justify-content: end;

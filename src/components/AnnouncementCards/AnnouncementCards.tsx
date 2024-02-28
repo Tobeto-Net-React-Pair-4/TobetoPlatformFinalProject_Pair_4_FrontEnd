@@ -63,7 +63,7 @@ const AnnouncementCards: React.FC = () => {
 			</Row>
 			<Row className="all-edu-btn">
 				<div className="p-row-container">
-					<a href="/duyurular	" className="link-full-row">
+					<Link to="/duyurular	" className="link-full-row">
 						<button className="load-more-btn">
 							<FontAwesomeIcon
 								icon={faChevronRight}
@@ -71,7 +71,7 @@ const AnnouncementCards: React.FC = () => {
 							/>
 							<span style={{ color: "black" }}>Daha Fazla Göster</span>
 						</button>
-					</a>
+					</Link>
 				</div>
 			</Row>
 		</div>

@@ -25,6 +25,7 @@ import Certificat from "../../pages/ProfilePages/Certificat/Certificat";
 import Setings from "../../pages/ProfilePages/Setings/Setings";
 import SocialMedia from "../../pages/ProfilePages/SocialMedia/SocialMedia";
 import PasswordReset from "../../pages/PasswordReset/PassworReset";
+import Calendar from "../Calendar/Calendar";
 import Homepage from "../../pages/Homepage/Homepage";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
@@ -45,105 +46,18 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	);
 	return (
 		<Routes>
-			<Route
-				path="/"
-				element={
-					<>
-						<Banner />
-						<CustomNavbar />
-						<Homepage />
-						<Footer />
-					</>
-				}
-			/>
-			<Route
-				path="/giris"
-				element={
-					<>
-						<Banner />
-						<CustomNavbar />
-						<div className="login-center">
-							<Login />
-						</div>
-						<LoginFooter />
-					</>
-				}
-			/>
-			<Route
-				path="/kayit-ol"
-				element={
-					<>
-						<Banner />
-						<CustomNavbar />
-						<div className="register-center">
-							<Register />
-						</div>
-						<LoginFooter />
-					</>
-				}
-			/>
-			<Route
-				path="/platform"
-				element={
-					<>
-						<Navi />
-						<PrivateRoute>
-							<Platform />
-						</PrivateRoute>
-						<Footer />
-					</>
-				}
-			/>
-			<Route
-				path="/egitimlerim"
-				element={
-					<>
-						<Navi />
-						<PrivateRoute>
-							<TrainingSection />
-						</PrivateRoute>
-					</>
-				}
-			/>
-			<Route
-				path="/duyurular"
-				element={
-					<>
-						<Navi />
-						<PrivateRoute>
-							<AnnouncementSection />
-						</PrivateRoute>
-					</>
-				}
-			/>
-			<Route
-				path="/sifremi-unuttum"
-				element={
-					<>
-						<Banner />
-						<CustomNavbar /> <PasswordReset />
-						<LoginFooter />
-					</>
-				}
-			/>
-			<Route
-				path="/istanbul-kodluyor"
-				element={
-					<>
-						<IstanbulKodluyor />
-					</>
-				}
-			/>
-			<Route
-				path="/activity"
-				element={
-					<>
-						<PrivateRoute>
-							<Activity />
-						</PrivateRoute>
-					</>
-				}
-			/>
+			<Route path="/" element={<><Banner /><CustomNavbar /><Homepage /><Footer /></>} />
+			<Route path="/giris" element={<><Banner /><CustomNavbar /><div className="login-center"><Login /></div><LoginFooter /></>} />
+			<Route path="/kayit-ol" element={<><Banner /><CustomNavbar /><div className="register-center"><Register /></div><LoginFooter /></>} />
+			<Route path="/platform" element={<><Navi /><PrivateRoute><Platform /></PrivateRoute><Footer /></>} />
+			<Route path="/egitimlerim" element={<><Navi /><PrivateRoute><TrainingSection /></PrivateRoute></>} />
+			<Route path="/duyurular" element={<><Navi /><PrivateRoute><AnnouncementSection /></PrivateRoute></>} />
+			<Route path="/sifremi-unuttum" element={<><Banner /><CustomNavbar /> <PasswordReset/><LoginFooter /></>}/>
+			<Route path="/istanbul-kodluyor" element={<><IstanbulKodluyor /></>} />
+			<Route path="/activity" element={<><PrivateRoute><Activity /></PrivateRoute></>} />
+			<Route path="/takvim" element={<><Navi /><PrivateRoute><Calendar/></PrivateRoute><Footer /></>}   />
+
+
 
 			{/* profilim/profilimi-duzenle/profil-bilgilerim */}
 			<Route

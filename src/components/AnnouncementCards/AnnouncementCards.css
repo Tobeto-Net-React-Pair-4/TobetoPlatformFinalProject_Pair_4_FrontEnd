@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+.anc-title {
+	color: #08ae53;
+	display: flex;
+	justify-content: space-around;
+	font-weight: 100;
+	font-size: 12px;
+}

@@ -1,16 +1,19 @@
 import { Paginate } from "../../core/models/PaginateResponseModel";
 import { GetListAnnouncementResponse } from "../../models/responses/announcement/getListAnnouncementResponse";
 import { CourseGetListResponse } from "../../models/responses/course/courseGetListResponse";
+import { GetListExperienceResponse } from "../../models/responses/experience/getListExperienceResponse";
 import { GetUserResponse } from "./../../models/responses/user/getUserResponse";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const savedUserState = localStorage.getItem("userData");
 const savedCoursesState = localStorage.getItem("courses");
 const savedAnnouncementsState = localStorage.getItem("announcements");
+const savedExperienceState = localStorage.getItem("experiences");
 interface PlatformState {
 	user: GetUserResponse;
 	courses: Paginate<CourseGetListResponse>;
 	announcements: Paginate<GetListAnnouncementResponse>;
+	experiences: Paginate<GetListExperienceResponse>;
 }
 const initialState: PlatformState = {
 	user: savedUserState ? JSON.parse(savedUserState) : ({} as GetUserResponse),
@@ -20,6 +23,9 @@ const initialState: PlatformState = {
 	announcements: savedAnnouncementsState
 		? JSON.parse(savedAnnouncementsState)
 		: ({} as Paginate<GetListAnnouncementResponse>),
+	experiences: savedExperienceState
+		? JSON.parse(savedExperienceState)
+		: ({} as Paginate<GetListExperienceResponse>),
 };
 
 const platformSlice = createSlice({
@@ -49,6 +55,16 @@ const platformSlice = createSlice({
 		},
 		removeAnnouncements(state) {
 			state.announcements = {} as Paginate<GetListAnnouncementResponse>;
+		},
+		setExperiences(
+			state,
+			action: PayloadAction<Paginate<GetListExperienceResponse>>
+		) {
+			state.experiences = action.payload;
+			localStorage.setItem("experiences", JSON.stringify(action.payload));
+		},
+		removeExperiences(state) {
+			state.experiences = {} as Paginate<GetListExperienceResponse>;
 		},
 	},
 });

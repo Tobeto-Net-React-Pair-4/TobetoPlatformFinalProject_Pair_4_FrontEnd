@@ -71,7 +71,7 @@ const Content: React.FC = () => {
 									</div>
 									<div className="unit-info-type">
 										<span className="unit-info-type-name">
-											Video - <span>4 dk</span>
+											Video - <span style={{color: "#A0A0A0"}}>4 dk</span>
 										</span>
 									</div>
 								</div>

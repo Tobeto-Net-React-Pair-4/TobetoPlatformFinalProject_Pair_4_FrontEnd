@@ -6,17 +6,6 @@ import { CourseGetListResponse } from "../../models/responses/course/courseGetLi
 
 const TrainingSection: React.FC = () => {
 	const courses = useSelector((state: any) => state.platform.courses.items);
-	function formatDateTime(dateTimeString: string): string {
-		const date: Date = new Date(dateTimeString);
-
-		const day: string = date.toLocaleDateString("tr-TR", { day: "numeric" });
-		const month: string = date.toLocaleDateString("tr-TR", { month: "long" });
-		const year: number = date.getFullYear();
-		const hour: string = date.getHours().toString().padStart(2, "0");
-		const minute: string = date.getMinutes().toString().padStart(2, "0");
-
-		return `${day} ${month} ${year} ${hour}:${minute}`;
-	}
 
 	return (
 		<>

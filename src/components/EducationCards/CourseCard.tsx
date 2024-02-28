@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import eduImage from "../../pages/Image/23_ANF_1_2fa2e5b117.jpg";
 import { CourseGetListResponse } from "../../models/responses/course/courseGetListResponse";
 import "../TrainingSection/TrainingSection.css";
 

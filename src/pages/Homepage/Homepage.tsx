@@ -1,23 +1,14 @@
-import React, { useEffect } from "react";
-import videoService from "../../services/videoService";
-import authService from "../../services/authService";
+import React from "react";
+import "./Homepage.css";
 
 type Props = {};
 
-const Homepage = (props: Props) => {
-  useEffect(() => {
-    authService
-      .register({
-        email: "string@string.com",
-        password: "string123",
-        firstName: "deneme",
-        lastName: "deneme",
-      })
-      .then((response) => console.log(response));
-  }, []);
-
-  return <div>Alper Çırak</div>;
+const Homepage: React.FC = (props: Props) => {
+	return (
+		<div>
+			<div>HOMEPAGE</div>
+		</div>
+	);
 };
 
 export default Homepage;
-// Formik

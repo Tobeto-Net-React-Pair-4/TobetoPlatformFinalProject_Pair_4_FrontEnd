@@ -16,7 +16,7 @@ import "../../fonts/fonts.css";
 import IstanbulKodluyor from "../../pages/IstanbulKodluyor/IstanbulKodluyor";
 import Activity from "../../pages/Activity/Activity";
 import ProfileEdit from "../../pages/ProfileEdit/ProfileEdit";
-import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import PersonalInfo from "../../pages/ProfilePages/PersonalInfo/PersonalInfo";
 import Experience from "../../pages/ProfilePages/Experience/Experience";
 import EducationLife from "../../pages/ProfilePages/EducationLife/EducationLife";
@@ -25,11 +25,14 @@ import Certificat from "../../pages/ProfilePages/Certificat/Certificat";
 import Setings from "../../pages/ProfilePages/Setings/Setings";
 import SocialMedia from "../../pages/ProfilePages/SocialMedia/SocialMedia";
 import PasswordReset from "../../pages/PasswordReset/PassworReset";
+import Homepage from "../../pages/Homepage/Homepage";
 
 const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	const profileBasePath = "/profilim/pofilimi-duzenle";
-	interface LayoutProps { children: ReactNode; }
-	const basePath = 'profilim/profilimi-duzenle/kisisel-bilgilerim';
+	interface LayoutProps {
+		children: ReactNode;
+	}
+	const basePath = "profilim/profilimi-duzenle/kisisel-bilgilerim";
 	const privatePersonalInfo = (path: string) => (
 		<Route
 			path={basePath + path}
@@ -42,28 +45,196 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 	);
 	return (
 		<Routes>
-			<Route path="/" element={<><Banner /><CustomNavbar /><Footer /></>} />
-			<Route path="/giris" element={<><Banner /><CustomNavbar /><div className="login-center"><Login /></div><LoginFooter /></>} />
-			<Route path="/kayit-ol" element={<><Banner /><CustomNavbar /><div className="register-center"><Register /></div><LoginFooter /></>} />
-			<Route path="/platform" element={<><Navi /><PrivateRoute><Platform /></PrivateRoute><Footer /></>} />
-			<Route path="/egitimlerim" element={<><Navi /><PrivateRoute><TrainingSection /></PrivateRoute></>} />
-			<Route path="/duyurular" element={<><Navi /><PrivateRoute><AnnouncementSection /></PrivateRoute></>} />
-			<Route path="/sifremi-unuttum" element={<><Banner /><CustomNavbar /> <PasswordReset/><LoginFooter /></>}/>
-			<Route path="/istanbul-kodluyor" element={<><IstanbulKodluyor /></>} />
-			<Route path="/activity" element={<><PrivateRoute><Activity /></PrivateRoute></>} />
-
-
+			<Route
+				path="/"
+				element={
+					<>
+						<Banner />
+						<CustomNavbar />
+						<Homepage />
+						<Footer />
+					</>
+				}
+			/>
+			<Route
+				path="/giris"
+				element={
+					<>
+						<Banner />
+						<CustomNavbar />
+						<div className="login-center">
+							<Login />
+						</div>
+						<LoginFooter />
+					</>
+				}
+			/>
+			<Route
+				path="/kayit-ol"
+				element={
+					<>
+						<Banner />
+						<CustomNavbar />
+						<div className="register-center">
+							<Register />
+						</div>
+						<LoginFooter />
+					</>
+				}
+			/>
+			<Route
+				path="/platform"
+				element={
+					<>
+						<Navi />
+						<PrivateRoute>
+							<Platform />
+						</PrivateRoute>
+						<Footer />
+					</>
+				}
+			/>
+			<Route
+				path="/egitimlerim"
+				element={
+					<>
+						<Navi />
+						<PrivateRoute>
+							<TrainingSection />
+						</PrivateRoute>
+					</>
+				}
+			/>
+			<Route
+				path="/duyurular"
+				element={
+					<>
+						<Navi />
+						<PrivateRoute>
+							<AnnouncementSection />
+						</PrivateRoute>
+					</>
+				}
+			/>
+			<Route
+				path="/sifremi-unuttum"
+				element={
+					<>
+						<Banner />
+						<CustomNavbar /> <PasswordReset />
+						<LoginFooter />
+					</>
+				}
+			/>
+			<Route
+				path="/istanbul-kodluyor"
+				element={
+					<>
+						<IstanbulKodluyor />
+					</>
+				}
+			/>
+			<Route
+				path="/activity"
+				element={
+					<>
+						<PrivateRoute>
+							<Activity />
+						</PrivateRoute>
+					</>
+				}
+			/>
 
 			{/* profilim/profilimi-duzenle/profil-bilgilerim */}
-			<Route path="/profilim/profilimi-duzenle" element={<><Navi /> <ProfileEdit /> </>}>
-				<Route path="/profilim/profilimi-duzenle/profil-bilgilerim" element={<><PrivateRoute><PersonalInfo /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/deneyimlerim" element={<><PrivateRoute><Experience /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/eğitim-hayatım" element={<> <PrivateRoute><EducationLife /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/yetkinliklerim" element={<><PrivateRoute><Competence /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/dillerim" element={<><PrivateRoute><ForeignLanguage /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/sertifikalar" element={<><PrivateRoute><Certificat /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/ayarlar" element={<><PrivateRoute><Setings /></PrivateRoute></>} />
-				<Route path="/profilim/profilimi-duzenle/sosyal-medya" element={<><PrivateRoute><SocialMedia /></PrivateRoute></>} />
+			<Route
+				path="/profilim/profilimi-duzenle"
+				element={
+					<>
+						<Navi /> <ProfileEdit />{" "}
+					</>
+				}
+			>
+				<Route
+					path="/profilim/profilimi-duzenle/profil-bilgilerim"
+					element={
+						<>
+							<PrivateRoute>
+								<PersonalInfo />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/deneyimlerim"
+					element={
+						<>
+							<PrivateRoute>
+								<Experience />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/eğitim-hayatım"
+					element={
+						<>
+							{" "}
+							<PrivateRoute>
+								<EducationLife />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/yetkinliklerim"
+					element={
+						<>
+							<PrivateRoute>
+								<Competence />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/dillerim"
+					element={
+						<>
+							<PrivateRoute>
+								<ForeignLanguage />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/sertifikalar"
+					element={
+						<>
+							<PrivateRoute>
+								<Certificat />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/ayarlar"
+					element={
+						<>
+							<PrivateRoute>
+								<Setings />
+							</PrivateRoute>
+						</>
+					}
+				/>
+				<Route
+					path="/profilim/profilimi-duzenle/sosyal-medya"
+					element={
+						<>
+							<PrivateRoute>
+								<SocialMedia />
+							</PrivateRoute>
+						</>
+					}
+				/>
 			</Route>
 			{/* {<Route path="/profilim" element{<Profile/>}>
 				<Route path="/profilimi-duzenle" element{<ProfileEdit/>}>
@@ -71,8 +242,7 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			</Route} */}
 			<Route path="*" element={<NotFound />} />
 
-			{privatePersonalInfo ('profil-bilgilerim')}
-
+			{privatePersonalInfo("profil-bilgilerim")}
 		</Routes>
 	);
 };

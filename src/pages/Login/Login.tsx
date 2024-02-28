@@ -8,12 +8,17 @@ import IstLogo from "../Image/ik-logo-dark.7938c0de.svg";
 import { login } from "../../store/auth/authSlice";
 import { LoginCredentials } from "../../models/requests/auth/loginCredentials";
 import userService from "../../services/userService";
-import { getCourses, setUser } from "../../store/platform/platformSlice";
+import {
+	setAnnouncements,
+	setCourses,
+	setUser,
+} from "../../store/platform/platformSlice";
 import { useDispatch } from "react-redux";
 import authService from "../../services/authService";
 import { HttpStatusCode } from "axios";
 import toastr from "toastr";
 import courseService from "../../services/courseService";
+import announcementService from "../../services/announcementService";
 
 const Login: React.FC = () => {
 	const navigate = useNavigate();
@@ -35,9 +40,11 @@ const Login: React.FC = () => {
 			const userData = (await userService.getByMail(values.email)).data;
 			const coursesData = (await courseService.getListByUserId(userData.id))
 				.data;
-			dispatch(getCourses(coursesData));
+			const announcementsData = (await announcementService.getAll()).data;
 			dispatch(login());
 			dispatch(setUser(userData));
+			dispatch(setCourses(coursesData));
+			dispatch(setAnnouncements(announcementsData));
 			navigate("/platform");
 			toastr.success("Giriş başarılı", "YEEEEEE");
 		}
@@ -95,16 +102,16 @@ const Login: React.FC = () => {
 							</button>
 							<label>
 								<small>
-								<Link
-									to="/sifremi-unuttum"
-									className="text-decoration-none text-muted "
-								>
-									<p
-										className="text-decoration-none text-muted mt-5 d-block"
-										style={{ cursor: "pointer" }}
+									<Link
+										to="/sifremi-unuttum"
+										className="text-decoration-none text-muted "
 									>
-										Şifremi Unuttum
-									</p>
+										<p
+											className="text-decoration-none text-muted mt-5 d-block"
+											style={{ cursor: "pointer" }}
+										>
+											Şifremi Unuttum
+										</p>
 									</Link>
 								</small>
 							</label>

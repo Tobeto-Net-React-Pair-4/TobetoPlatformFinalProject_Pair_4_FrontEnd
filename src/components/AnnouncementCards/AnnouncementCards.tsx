@@ -3,57 +3,53 @@ import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
-interface Announcement {
-	id: number;
-	title: string;
-	content: string;
-	date: string;
-	readMoreLink: string;
-}
-
-const exampleAnnouncements: Announcement[] = [
-	{
-		id: 1,
-		title: "Duyuru",
-		content: "Mindset Anketi",
-		date: "31.01.2024",
-		readMoreLink: "/announcement",
-	},
-	// Additional announcements can be added here
-];
+import { useSelector } from "react-redux";
+import { GetListAnnouncementResponse } from "../../models/responses/announcement/getListAnnouncementResponse";
 
 const AnnouncementCards: React.FC = () => {
+	const announcements = useSelector(
+		(state: any) => state.platform.announcements.items
+	);
+
+	function formatDate(dateString: string): string {
+		const dateObject: Date = new Date(dateString);
+		const formattedDate: string = dateObject.toLocaleDateString("tr-TR", {
+			day: "numeric",
+			month: "2-digit",
+			year: "numeric",
+		});
+		return formattedDate;
+	}
+
 	return (
 		<div className="tab-announcement">
 			<Row>
 				<Col>
 					<Row className="anc-row">
-						{exampleAnnouncements.map((announcement) => (
+						{announcements?.map((announcement: GetListAnnouncementResponse) => (
 							<Col key={announcement.id} className="anc-card">
 								<Row>
 									<Col>
 										<div className="anc-title">
-											{announcement.title}{" "}
-											<span className="anc-ik">İstanbul Kodluyor</span>
+											{announcement.type}
+											<span className="anc-ik">
+												{announcement.organizationName}
+											</span>
 										</div>
 										<br></br>
 										<span className="anc-card-check">
-											{announcement.content}
+											{announcement.title}
 											<br></br>
 											<br></br>
 											<br></br>
 										</span>
 										<Row className="anc-date-row">
 											<Col className="anc-date">
-												<FontAwesomeIcon icon={faCalendar} />{" "}
-												{announcement.date}
+												<FontAwesomeIcon icon={faCalendar} />
+												{formatDate(announcement.date)}
 											</Col>
 											<Col className="anc-link">
-												<Link
-													to={announcement.readMoreLink}
-													className="anc-link"
-												>
+												<Link to={announcement.message} className="anc-link">
 													Devamını Oku
 												</Link>
 											</Col>

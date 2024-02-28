@@ -14,7 +14,7 @@ const ParentComponent = () => {
           className="ant-btn ant-btn-default ant-btn-lg ant-btn-block btn"
           onClick={toggleOffCanvas}
         >
-          <span>DETAY</span>
+          <span style={{color: "#9933FF"}}>DETAY</span>
         </button>
       </div>
 

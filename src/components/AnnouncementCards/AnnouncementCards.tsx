@@ -22,7 +22,7 @@ const AnnouncementCards: React.FC = () => {
 	}
 
 	return (
-		<div className="tab-announcement">
+		<div className="tab-announcement">			
 			<Row>
 				<Col>
 					<Row className="anc-row">

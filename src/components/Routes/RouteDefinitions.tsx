@@ -256,7 +256,15 @@ const RouteDefinitions: React.FC<Record<string, never>> = () => {
 			<Route path="*" element={<NotFound />} />
 
 			{privatePersonalInfo("profil-bilgilerim")}
+
+			<Route
+					path="/not-found"
+					element={
+						<NotFound/>
+					}
+				/>
 		</Routes>
+		
 	);
 };
 

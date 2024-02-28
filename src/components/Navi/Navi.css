@@ -146,3 +146,15 @@
 .btn-group.header-avatar .dropdown-item:hover {
 	background-color: var(--bs-light);
 }
+
+
+.nav-link {
+    display: block;
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 1em 0em 1em 1.5em !important;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}

@@ -9,7 +9,7 @@ import {
 	Image,
 } from "react-bootstrap";
 import "./Navi.css";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import TbtLogo from "../Image/tobeto-logo.png";
 import ppImage from "../Image/13315.png";
 import { logout } from "../../store/auth/authSlice";
@@ -106,7 +106,7 @@ const Navi: React.FC = () => {
 											Katalog
 										</Nav.Link>
 										<Nav.Link href="/takvim"
-										 className="nav-link-custom c-gray-3">
+											className="nav-link-custom c-gray-3">
 											Takvim
 										</Nav.Link>
 										<Nav.Link
@@ -176,31 +176,25 @@ const Navi: React.FC = () => {
 						</Navbar.Collapse>
 						{!isMobile && (
 							<Navbar.Collapse id="basic-navbar-nav">
-								<Nav className=" flex-grow-1 pe-3">
-									<Nav.Link
-										href="/platform"
-										className="nav-link-custom nav-active"
-									>
+								<Nav className="flex-grow-1 pe-3">
+									<NavLink to="/platform" className="nav-link-custom nav-link nav-active">
 										Ana Sayfa
-									</Nav.Link>
-									<Nav.Link href="#" className="nav-link-custom c-gray-3">
+									</NavLink>
+									<NavLink to="/profilim" className="nav-link-custom nav-link c-gray-3">
 										Profilim
-									</Nav.Link>
-									<Nav.Link href="#" className="nav-link-custom c-gray-3">
+									</NavLink>
+									<NavLink to="/degerlendirmeler" className="nav-link-custom nav-link c-gray-3">
 										Değerlendirmeler
-									</Nav.Link>
-									<Nav.Link href="#" className="nav-link-custom c-gray-3">
+									</NavLink>
+									<NavLink to="/katalog" className="nav-link-custom nav-link c-gray-3">
 										Katalog
-									</Nav.Link>
-									<Nav.Link href="/takvim" className="nav-link-custom c-gray-3">
+									</NavLink>
+									<NavLink to="/takvim" className="nav-link-custom nav-link c-gray-3">
 										Takvim
-									</Nav.Link>
-									<Nav.Link
-										href="/istanbul-kodluyor"
-										className="nav-link-custom c-gray-3"
-									>
+									</NavLink>
+									<NavLink to="/istanbul-kodluyor" className="nav-link-custom nav-link c-gray-3">
 										İstanbul Kodluyor
-									</Nav.Link>
+									</NavLink>
 								</Nav>
 							</Navbar.Collapse>
 						)}
